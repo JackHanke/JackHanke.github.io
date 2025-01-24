@@ -7,7 +7,7 @@ categories: jekyll update
 
 # Neural Networks from Scratch
 
-Associated [GitHub repo 👾](https://github.com/JackHanke/nets)
+Associated [GitHub Repo 👾](https://github.com/JackHanke/nets)
 
 TODO
 

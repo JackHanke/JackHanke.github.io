@@ -7,7 +7,7 @@ categories: jekyll update
 
 # Minimal Inscribed Polyforms
 
-[GitHub repo 👾](https://github.com/JackHanke/minimal-inscribed-polyforms) | [YouTube video 📺](https://www.youtube.com/watch?v=8N80EbXVUU0)
+[GitHub Repo 👾](https://github.com/JackHanke/minimal-inscribed-polyforms) | [YouTube Video 📺](https://www.youtube.com/watch?v=8N80EbXVUU0)
 
 ## A Global Pandemic
 
