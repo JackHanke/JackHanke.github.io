@@ -21,14 +21,12 @@
 title: Jack Hanke's Website
 # email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Summaries of projects, demonstrations, and blogs.
+  Machine learning, math, and blogging.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-# twitter_username: jekyllrb
+
 github_username:  JackHanke
-
 youtube_username: "@jackhanke343"
-
 linkedin_username: jack-hanke-34639a177
 
 # Build settings

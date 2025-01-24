@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "A Welcome"
+date:   2025-01-23 13:58:32 -0600
+categories: jekyll update
+---
+Welcome to my website. 
+
+I usually write about machine learning and mathematics. I also have a passion for educational outreach on these topics. 
+
+
