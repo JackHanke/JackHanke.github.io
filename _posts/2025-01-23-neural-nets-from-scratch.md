@@ -5,7 +5,7 @@ date:   2025-01-23 19:58:33 -0600
 categories: jekyll update
 ---
 
-[GitHub Repo 👾](https://github.com/JackHanke/nets)
+[NN GitHub Repo 👾](https://github.com/JackHanke/nets) | [RL GitHub Repo 👾](https://github.com/JackHanke/2048rl)
 
 ## Wow Machine Learning is Cool
 
@@ -59,9 +59,9 @@ $$\frac{\partial C}{\partial b_j^\ell} = \delta_j^{\ell}$$
 
 $$\frac{\partial C}{\partial w_{jk}^\ell} = a_k^{\ell-1}\delta_j^{\ell}$$
 
-I sturggled with the intuition as to why the error would be defined as a gradient for a while. Though Nielsen describes this well, it just seemed too perfect, and consequently took a long time to "sit right".
+For a while I struggled with the intuition as to why the error would be defined as a gradient. Though Nielsen describes this well, it just seemed too perfect, and consequently took a long time to "sit right" with me.
 
-But after doing my own derivations for a small network, I felt as if I really could write a neural network from scratch. And that is what I did. After a series of stressful nights, I did complete the project. I encountered a series of difficult bugs, including after my network was running but failing to learn. The bug that took longest to find was an erroneous summation of the weight gradients in a batch, as opposed to the average. But after I weeded all these issues out, I'm happy to say I completed the project. Below is an interactive demo for MNIST using a network written and trained entirely from scratch. 
+But after doing my own derivations for a small network, I felt as if I really could write a neural network from scratch. And that is what I did. After a series of stressful nights, I did complete the project. I encountered a series of difficult bugs, including after my network was running but failing to learn. The bug that took longest to find was an erroneous summation of the weight gradients in a batch, as opposed to an average. But after I weeded all these issues out, I'm happy to say I completed the project. Below is an interactive demo for MNIST using a network written and trained entirely from scratch. 
 
 TODO demo, credit person that wrote canvas
 
@@ -69,15 +69,27 @@ This level of understanding not only grounded my understanding of the topic, but
 
 ## (Variational) AutoEncoders from Scratch
 
-One of the first thing one can do with a neural network is to create an [autoencoder](https://en.wikipedia.org/wiki/Autoencoder). 
+One of the first things one can do with a neural network is to create an [autoencoder](https://en.wikipedia.org/wiki/Autoencoder). An autoencoder is a neural network that is trained to predict its input, but is structured so that the network "funnels" information through a smaller space before being expanded out. This smaller space is often called the *latent space*, and the task of predicting input is often called *reconstruction*.
 
-TODO
+The portion of the network that maps the input to the latent space is called the *encoder*, and the part that maps the latent space to the prediction is the *decoder*. 
 
-This motivates the study of [variational autoencoders](https://en.wikipedia.org/wiki/Variational_autoencoder).
+TODO add diagram of AE
 
-$$\mathcal{L} = \mathcal{L}_{rec} + \mathcal{L}_{rec} = \frac{1}{2}\sum_{i}(x_i - x_i')^2 - \frac{1}{2}\sum_{i}(1+2\log(\sigma_i)-\mu_i^2-\sigma_i^2).$$
+If we denote $x$ as the input and $x'$ as the predicted input, an autoencoder might use the sum of squared errors loss function to train on, like so.
 
-Because I have yet to implement an automatic differentiation engine, I had to compute the gradients for a VAE by hand. 
+$$\mathcal{L} = \frac{1}{2}\sum_{i}(x_i - x_i')^2$$
+
+This loss solely prioritizes the task of reconstruction for the network, so the latent space is often unorganized. This means that points in the latent space that aren't derived directly from data often decode into a blurry mess. 
+
+This is bad if one wants not just to compress the data, but generate plausible samples from the original data distribution. It turns out there is a way to train a network that also prioritizes latent space organization! These networks are called [variational autoencoders](https://en.wikipedia.org/wiki/Variational_autoencoder), or VAEs for short. After I watched [this excellent YouTube](https://www.youtube.com/watch?v=qJeaCHQ1k2w&t=826s) video by Deepia, VAEs became the next network architecture I chose to implement from scratch. 
+
+The loss function for VAEs has two components, the usual reconstruction loss, written $$\mathcal{L}_{rec}$$, and the *regularization loss*, written $\mathcal{L}_{reg}$. The regularization loss is a mathematical expression for how far away the distribution created by the encoder $P$ differs from some given distribution $Q$. VAEs choose this $Q$ to be a standard normal distribution of some latent dimension. 
+
+More specifically, the regularization loss is the [Kullback-Leibler divergence](https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence) between the created normal distribution to the standard normal. KL divergence is usually complicated to compute, but the divergence between two gaussians can be symbollically written. This gives the full loss function for VAEs.
+
+$$\mathcal{L} = \mathcal{L}_{rec} + \mathcal{L}_{reg} = \frac{1}{2}\sum_{i}(x_i - x_i')^2 - \frac{1}{2}\sum_{i}(1+2\log(\sigma_i)-\mu_i^2-\sigma_i^2).$$
+
+Because I have yet to implement an automatic differentiation engine, I had to compute the gradients for a VAE by hand. I also had to come up with a clever way to write a VAE given how I chose to implement the neural network class. This resulted
 
 For VAE's that consist of encoder $E$ and decoder $D$, we have the following loss function
 
@@ -129,3 +141,7 @@ I chose to train my network on the EMNIST dataset (as opposed to the MNIST datas
 I had a lot of fun sending messages to my friends with the trained network. 
 
 TODO There was a fun bit of implementation as to how I would structure the letters to create the best-looking `.gif`.
+
+## Reinforcement Learning from Scratch
+
+TODO
