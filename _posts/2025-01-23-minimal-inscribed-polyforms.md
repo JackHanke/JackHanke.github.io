@@ -5,8 +5,6 @@ date:   2025-01-23 19:58:32 -0600
 categories: jekyll update
 ---
 
-# Minimal Inscribed Polyforms
-
 [GitHub Repo 👾](https://github.com/JackHanke/minimal-inscribed-polyforms) | [YouTube Video 📺](https://www.youtube.com/watch?v=8N80EbXVUU0)
 
 ## A Global Pandemic
