@@ -27,25 +27,23 @@ Each time I would work through a Jupyter notebook, I would inevitabely get to a 
 
 I would almost scream "What is `.train()` doing!?" The thing I wanted from the course most was reduced to a single line. Worst of all, my instructors often downplayed the details as "laborious" and "uninteresting applications of the chain rule". Well they weren't uninteresting to me!
 
-To clarify, I understand that hiding complexity is what programming is all about. It is necessary for ease of use, and I use frameworks like `sklearn` and `PyTorch` all the time. But my intellectual curiosity felt like it was slamming into a brick wall. 
-
-So I decided I would have to go out on my own. I was going to do it from scratch.
+To clarify, I understand that hiding complexity is what programming is all about. It is necessary for ease of use, and I use frameworks like `sklearn` and `PyTorch` all the time. But my intellectual curiosity felt like it was slamming into a brick wall. So I decided I would have to go out on my own. I was going to do it from scratch.
 
 ## Neural Networks from Scratch
 
-My interest in deep learning led me to the *excellent* textbook [Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/) by Michael Nielsen. I follow the notation laid out in this course, namely that a feed forward neural network is defined by, for layers $2 \leq \ell \leq L$, 
+My interest in deep learning led me to the *excellent* textbook [Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/) by Michael Nielsen. I follow the notation laid out in this text, namely that a feed forward neural network is defined for layers $2 \leq \ell \leq L$ as 
 
 $$z^{\ell} = w^{\ell}a^{\ell-1} + b^{\ell}$$
 
 $$a^{\ell} = \sigma^{\ell}(z^{\ell})$$
 
-for activation functions $\sigma^{\ell}$ and weights $w^{\ell}$ and biases $b^{\ell}$. Note that the weights and biases are almost always matrices.
+for activation functions $\sigma^{\ell}$, weights $w^{\ell}$ and biases $b^{\ell}$. Note that the weights and biases are almost always matrices.
 
 >  NOTE: Superscripts are not exponentiation unless stated. 
 
 TODO add diagram
 
-Even this textbook lists the backpropagation chapter as optional reading, but it was beautifully written all the same. After reading through it in its entirety, intentionally avoiding the provided implementations, I returned to the backpropagation chapter. Nielsen defines the algorithm as follows. Define the error $\delta_j^{\ell}$ of neuron $j$ at layer $\ell$ be 
+Even this textbook lists the backpropagation chapter as optional reading, but the chapter was beautifully written all the same. After reading through it in its entirety, intentionally avoiding the provided implementations, I returned to the backpropagation chapter. Nielsen defines the algorithm as follows. Define the error $\delta_j^{\ell}$ of neuron $j$ at layer $\ell$ be 
 
 $$\delta_j^{\ell} = \frac{\partial C}{\partial z_j^\ell}$$ 
 
@@ -143,5 +141,9 @@ I had a lot of fun sending messages to my friends with the trained network.
 TODO There was a fun bit of implementation as to how I would structure the letters to create the best-looking `.gif`.
 
 ## Reinforcement Learning from Scratch
+
+{:refdef: style="text-align: center;"}
+![]({{ site.baseimg }}/assets/2048viz.gif)
+{: refdef}
 
 TODO
