@@ -142,8 +142,22 @@ TODO There was a fun bit of implementation as to how I would structure the lette
 
 ## Reinforcement Learning from Scratch
 
+I have been playing [2048](https://www.2048.org/) since its release in 2014. I always knew it was a perfect choice for a beginner reinforcement learning project, as it has a large state space, small action space, and a clearly defined reward function. The game has non-trivial strategy and is [entirely open source](https://github.com/gabrielecirulli/2048). It's a great game, and an even better game to learn RL with. 
+
+I decided I would make the bot after I completed the [Sutton and Barto](http://www.incompleteideas.net/book/the-book.html) textbook. It was an intense summer read, but when I completed it I got to work. The first challenge the project posed was the game itself. I initially used a pre-built Python implementation called [Macht](https://github.com/rolfmorel/macht), but later chose to implement the game from scratch for speed of training. 
+
+As for the learning algorithm, I initially wanted to do policy optimization, as opposed to TD or Q learning. I really liked the idea of having a single neural network that just takes in a board state and plays a good move. However, the performance was really poor, and I abandoned the technique quickly. I decided to see if other people had written 2048 RL bots to see what learning algorithm I should pursue. 
+
+I was surprised to find that not only have people written 2048 bots, but there is serious academic research on the subject. I looked at a series of papers, the most important being [Temporal Difference Learning of N-Tuple Networks for the Game 2048](https://www.cs.put.poznan.pl/wjaskowski/pub/papers/Szubert2014_2048.pdf) by Szubert and colleagues. They showed that TD learning with a [RAMnet](https://en.wikipedia.org/wiki/RAMnets) approximator worked well, and so I chose to pursue this. 
+
+There was a gruelling episode of debugging my algorithm, so finally seeing the algorithm finally learning was one of the most satisfying moments of my programming journey. After training for 10,000 games, the agent achieves the 2048 tile 49.1% of the time, and achieves 4196 tile 1.5% of the time.
+
+Now that the bot was trained, the final step was hooking up the history of the game to play on the real game's visualizer. I cloned the original repo and changed the internal Javascript to play a JSON history to make the final animation. I showcased one of my agent's bests games in the following animation.
+
 {:refdef: style="text-align: center;"}
 ![]({{ site.baseimg }}/assets/2048viz.gif)
 {: refdef}
+
+## Citations
 
 TODO
