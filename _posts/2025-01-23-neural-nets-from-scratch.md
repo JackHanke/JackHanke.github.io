@@ -39,9 +39,13 @@ $$a^{\ell} = \sigma^{\ell}(z^{\ell})$$
 
 for activation functions $\sigma^{\ell}$, weights $w^{\ell}$ and biases $b^{\ell}$. Note that the weights and biases are almost always matrices.
 
->  NOTE: Superscripts are not exponentiation unless stated. 
+>  NOTE: Superscripts are layer indexes and not exponentiation, unless otherwise stated. 
 
-TODO add diagram
+<!-- <div align=center>
+    <script type="text/tikz">
+        
+    </script>
+</div> -->
 
 Even this textbook lists the backpropagation chapter as optional reading, but the chapter was beautifully written all the same. After reading through it in its entirety, intentionally avoiding the provided implementations, I returned to the backpropagation chapter. Nielsen defines the algorithm as follows. Define the error $\delta_j^{\ell}$ of neuron $j$ at layer $\ell$ be 
 
@@ -49,13 +53,21 @@ $$\delta_j^{\ell} = \frac{\partial C}{\partial z_j^\ell}$$
 
 Then backpropagating the error can be conducted using the following equations
 
+$$\begin{eqnarray*}
+\delta^L & = & \nabla_a C \cdot \sigma'^{L}(z^L) \\
+\delta^{\ell} & = & ((w^{\ell+1})^{T}\delta^{\ell+1}) \cdot \sigma'^{\ell}(z^{\ell}) \\
+\frac{\partial C}{\partial b_j^\ell} & = & \delta_j^{\ell} \\
+\frac{\partial C}{\partial w_{jk}^\ell} & = & a_k^{\ell-1}\delta_j^{\ell}
+\end{eqnarray*}$$
+
+<!-- 
 $$\delta^L = \nabla_a C \cdot \sigma'^{L}(z^L)$$
 
 $$\delta^{\ell} = ((w^{\ell+1})^{T}\delta^{\ell+1}) \cdot \sigma'^{\ell}(z^{\ell})$$
 
 $$\frac{\partial C}{\partial b_j^\ell} = \delta_j^{\ell}$$
 
-$$\frac{\partial C}{\partial w_{jk}^\ell} = a_k^{\ell-1}\delta_j^{\ell}$$
+$$\frac{\partial C}{\partial w_{jk}^\ell} = a_k^{\ell-1}\delta_j^{\ell}$$ -->
 
 For a while I struggled with the intuition as to why the error would be defined as a gradient. Though Nielsen describes this well, it just seemed too perfect, and consequently took a long time to "sit right" with me.
 
