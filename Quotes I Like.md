@@ -4,12 +4,29 @@ title: Quotes I Like
 permalink: /quotes/
 ---
 
-- "In the past, censorship worked by blocking the flow of information. In the twenty-first century, censorship works by flooding people with irrelevant information. [...] In ancient times having power meant having access to data. Today having power means knowing what to ignore." - Yuval Noah Harari, Homo Deus: A History of Tomorrow 
+### A collection of quotes that I enjoy, think about, and want to share.
 
-- "The party told you to reject the evidence of your eyes and ears. It was their final, most essential command." - George Orwell, 1984
+*"Man is the only animal that refuses to be what he is." - Albert Camus, Carnets*
 
-- "Someday is not a day of the week." - Janet Daiely
+Like my favorite song, America's *Horse with No Name*, it's about something different everytime I hear it. 
 
-- "There is nothing more difficult to take in hand, more perilous to conduct, or more uncertain in its success than to take the lead in the introduction of a new order of things, because the innovator has for enemies all those who have done well under the old condition, and lukewarm defenders in those who may do well under the new." -  Niccolò Machiavelli, The Prince 
+*"Someday is not a day of the week." - Janet Dailey*
 
-- "Man is the only creature that refuses to be what he is." - Albert Camus
+I hate motivational quotes, because they are too often so corny they fail to motivate. This one succeeds.
+
+
+*When we are tired, we are attacked by ideas we conquered long ago. - Friedrich Nietzsche*
+
+Nietzsche's most relatable quote. 
+
+*"In the past, censorship worked by blocking the flow of information. In the twenty-first century, censorship works by flooding people with irrelevant information. [...] In ancient times having power meant having access to data. Today having power means knowing what to ignore." - Yuval Noah Harari, Homo Deus: A History of Tomorrow*
+
+My generation's curse.
+
+*"The party told you to reject the evidence of your eyes and ears. It was their final, most essential command." - George Orwell, 1984*
+
+I am proud to be an American, where at least I know I'm free.
+
+*"There is nothing more difficult to take in hand, more perilous to conduct, or more uncertain in its success than to take the lead in the introduction of a new order of things, because the innovator has for enemies all those who have done well under the old condition, and lukewarm defenders in those who may do well under the new." -  Niccolò Machiavelli, The Prince*
+
+It is hard to try something new, and even harder to make a living out of it. A career that didn't exist 15 years ago is a scary one to pick up. 
