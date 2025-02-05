@@ -11,3 +11,5 @@ permalink: /quotes/
 - "Someday is not a day of the week." - Janet Daiely
 
 - "There is nothing more difficult to take in hand, more perilous to conduct, or more uncertain in its success than to take the lead in the introduction of a new order of things, because the innovator has for enemies all those who have done well under the old condition, and lukewarm defenders in those who may do well under the new." -  Niccolò Machiavelli, The Prince 
+
+- "Man is the only creature that refuses to be what he is." - Albert Camus
