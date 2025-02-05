@@ -8,7 +8,7 @@ permalink: /quotes/
 
 *"Man is the only animal that refuses to be what he is." - Albert Camus, Carnets*
 
-Like my favorite song, America's *Horse with No Name*, it's about something different everytime I hear it. 
+Like my favorite song, America's *A Horse with No Name*, it's about something different everytime I hear it. 
 
 *"Someday is not a day of the week." - Janet Dailey*
 
