@@ -12,18 +12,13 @@ To do development on the website with live updates, run the following command an
 ## TODOs
 
 For OHC...
-- Writeup example in IlMango's video
 - Add 16th value in table
 - Check definition for capital lambda function, do better at writing up the definitions
-
-For RISK...
-- Write out numerator
-- Write up better introduction
-- Write out proof for second exercize
 
 For NNs...
 - [Demo](https://github.com/j-weatherwax/MNIST-Visualizer)
 - [NN diagram](https://duckduckgo.com/?t=ffab&q=tikz+neural+network+&iax=images&ia=images)
+- Diffusion writeup
 - Better gradients explanation, split posts?
 
 For Mosaics...
