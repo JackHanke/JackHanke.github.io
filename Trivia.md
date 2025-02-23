@@ -4,7 +4,7 @@ title: Trivia
 permalink: /trivia/
 ---
 
-I occassionally enjoy generating trivia questions for things I am interested in, especially the two original six Star Wars movies.
+I occassionally enjoy generating trivia questions for things I am interested in, especially the original six Star Wars movies.
 
 ## Star Wars Trivia
 

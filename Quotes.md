@@ -25,16 +25,22 @@ My generation's curse.
 
 *"The party told you to reject the evidence of your eyes and ears. It was their final, most essential command." - George Orwell, 1984*
 
-I am proud to be an American, where at least I know I'm free.
+I often worry that I think in too-partisan-a-manner. I try and remind myself of this quote when thinking about the state of our nation.
 
 *"There is nothing more difficult to take in hand, more perilous to conduct, or more uncertain in its success than to take the lead in the introduction of a new order of things, because the innovator has for enemies all those who have done well under the old condition, and lukewarm defenders in those who may do well under the new." -  Niccolò Machiavelli, The Prince*
 
 It is hard to try something new, and even harder to make a living out of it. A career that didn't exist 15 years ago is a scary one to pick up. 
 
-"And blood-black nothingness began to spin
-A system of cells interlinked within
-Cells interlinked within cells interlinked
-Within one stem. And dreadfully distinct
-Against the dark, a tall white fountain played." - 
+*"And blood-black nothingness began to spin*
 
+*A system of cells interlinked within*
 
+*Cells interlinked within cells interlinked*
+
+*Within one stem. And dreadfully distinct*
+
+*Against the dark, a tall white fountain played."*
+
+*- Vladimir Nabokov, Pale Fire: A Poem in Four Cantos*
+
+... interlinked.
