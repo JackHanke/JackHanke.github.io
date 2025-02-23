@@ -9,6 +9,8 @@ To do development on the website with live updates, run the following command an
 `bundle exec jekyll serve --livereload`
 
 ## TODOs
+- For site in general...
+    - Find way to organize blog posts into Game math, pure math, and ML
 - For Trivia...
     - Add hide/show on click so it doesnt spoil the trivia!
 - For OHC...
@@ -20,7 +22,7 @@ To do development on the website with live updates, run the following command an
     - Diffusion writeup
     - Better gradients explanation, split posts?
 - For Minimals...
-    - Literally everything
+    - Aztec writeup
 - Symmetric Runs
     - Literally everything
 - A Welcome...
