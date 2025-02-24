@@ -552,14 +552,153 @@ $$\rho(\triangle^{H*}_n) =s(n) - 2s(n-1) = \sum_{k=0}^{n-1} \binom{2k}{k} - 2\su
 
 ## Trivial Minimal Inscribed Polyforms
 
-Strangely, some families do not have a strictly increasing number of minimal inscribed polyforms in $n$. A family of labelled duals with this property is referred to as a *trivial* family. 
+Strangely, some families do not have a strictly increasing number of minimal inscribed polyforms in $n$. A family of labelled duals with this property is referred to as a *trivial* family. Inspired by the Article Circle Theorem, I really wanted to enumerate minimal inscribed polyforms inscribed in the [Aztec diamond](https://en.wikipedia.org/wiki/Aztec_diamond). An Aztec diamond can have a length $n$ and a width $m$, where the length and height are the number of squares on the respective sides. An example of an $n,m=3$ Aztec diamond is shown below.
 
-TODO
+<div align=center>
+    <script type="text/tikz">
+    % setup
+    \newcommand{\cell}[4]{\filldraw[gray!40] ( #1 , #2 ) rectangle ( #3 , #4 ); \draw[thick] ( #1 , #2 ) rectangle ( #3 , #4 );}    
+    \newcommand{\cellw}[4]{\draw[thick] ( #1 , #2 ) rectangle ( #3 , #4 );}
+    \newcommand{\lablnode}[3]{\node[shape=circle,draw=white,fill=white, inner sep=0pt,minimum size=2pt] (A) at ( #1 , #2 ) {#3};}
+    % actual image
+    \begin{tikzpicture}[scale=1.5]
+        \( \cellw{1}{0}{1.5}{0.5} \);
+        \( \cellw{1.5}{0}{2}{0.5} \);
+        
+        \( \cellw{0.5}{0.5}{1}{1} \);
+        \( \cellw{1}{0.5}{1.5}{1} \);
+        \( \cellw{1.5}{0.5}{2}{1} \);
+        \( \cellw{2}{0.5}{2.5}{1} \);
+        
+        \( \cellw{0}{1}{0.5}{1.5} \);
+        \( \cellw{0.5}{1}{1}{1.5} \);
+        \( \cellw{1}{1}{1.5}{1.5} \);
+        \( \cellw{1.5}{1}{2}{1.5} \);
+        \( \cellw{2}{1}{2.5}{1.5} \);
+        \( \cellw{2.5}{1}{3}{1.5} \);
+        
+        \( \cellw{0}{1.5}{0.5}{2} \);
+        \( \cellw{0.5}{1.5}{1}{2} \);
+        \( \cellw{1}{1.5}{1.5}{2} \);
+        \( \cellw{1.5}{1.5}{2}{2} \);
+        \( \cellw{2}{1.5}{2.5}{2} \);
+        \( \cellw{2.5}{1.5}{3}{2} \);
+        
+        \( \cellw{0.5}{2}{1}{2.5} \);
+        \( \cellw{1}{2}{1.5}{2.5} \);
+        \( \cellw{1.5}{2}{2}{2.5} \);
+        \( \cellw{2}{2}{2.5}{2.5} \);
+        
+        \( \cellw{1}{2.5}{1.5}{3} \);
+        \( \cellw{1.5}{2.5}{2}{3} \);
+    \end{tikzpicture}
+    </script>
+</div>
+
+I was surprised that the Aztec diamond was a trivial family, only having $4$ minimal inscribed polyforms when $n=m$ for any $n \geq 2$, namely the below polyform and its rotations. 
+
+<div align=center>
+    <script type="text/tikz">
+    % setup
+    \newcommand{\cell}[4]{\filldraw[gray!40] ( #1 , #2 ) rectangle ( #3 , #4 ); \draw[thick] ( #1 , #2 ) rectangle ( #3 , #4 );}    
+    \newcommand{\cellw}[4]{\draw[thick] ( #1 , #2 ) rectangle ( #3 , #4 );}
+    \newcommand{\lablnode}[3]{\node[shape=circle,draw=white,fill=white, inner sep=0pt,minimum size=2pt] (A) at ( #1 , #2 ) {#3};}
+    % actual image
+    \begin{tikzpicture}[scale=1.5]
+        \( \cellw{1}{0}{1.5}{0.5} \);
+        \( \cellw{1.5}{0}{2}{0.5} \);
+        
+        \( \cellw{0.5}{0.5}{1}{1} \);
+        \( \cellw{1}{0.5}{1.5}{1} \);
+        \( \cellw{1.5}{0.5}{2}{1} \);
+        \( \cellw{2}{0.5}{2.5}{1} \);
+        
+        \( \cell{0}{1}{0.5}{1.5} \);
+        \( \cell{0.5}{1}{1}{1.5} \);
+        \( \cell{1}{1}{1.5}{1.5} \);
+        \( \cell{1.5}{1}{2}{1.5} \);
+        \( \cell{2}{1}{2.5}{1.5} \);
+        \( \cell{2.5}{1}{3}{1.5} \);
+        
+        \( \cell{0}{1.5}{0.5}{2} \);
+        \( \cellw{0.5}{1.5}{1}{2} \);
+        \( \cellw{1}{1.5}{1.5}{2} \);
+        \( \cellw{1.5}{1.5}{2}{2} \);
+        \( \cellw{2}{1.5}{2.5}{2} \);
+        \( \cell{2.5}{1.5}{3}{2} \);
+        
+        \( \cellw{0.5}{2}{1}{2.5} \);
+        \( \cellw{1}{2}{1.5}{2.5} \);
+        \( \cellw{1.5}{2}{2}{2.5} \);
+        \( \cellw{2}{2}{2.5}{2.5} \);
+        
+        \( \cellw{1}{2.5}{1.5}{3} \);
+        \( \cellw{1.5}{2.5}{2}{3} \);
+    \end{tikzpicture}
+    </script>
+</div>
+
+I was really disappointed that this family was trivial, so I thought about what I could do to get around this. Then I realized: what if I just made the corners count as adjacent too! 
 
 ## My White Whale Problem
 
-TODO
+Because we were dealing with unit squares connected by adjacent edges and adjacent corners, I decided to call these objects *minimal inscribed pseudopolyominos*. Here is an example of one of these polyominos.
+
+<div align=center>
+    <script type="text/tikz">
+    % setup
+    \newcommand{\cell}[4]{\filldraw[gray!40] ( #1 , #2 ) rectangle ( #3 , #4 ); \draw[thick] ( #1 , #2 ) rectangle ( #3 , #4 );}    
+    \newcommand{\cellw}[4]{\draw[thick] ( #1 , #2 ) rectangle ( #3 , #4 );}
+    \newcommand{\lablnode}[3]{\node[shape=circle,draw=white,fill=white, inner sep=0pt,minimum size=2pt] (A) at ( #1 , #2 ) {#3};}
+    % actual image
+    \begin{tikzpicture}[scale=1.5]
+        \( \cellw{1}{0}{1.5}{0.5} \);
+        \( \cellw{1.5}{0}{2}{0.5} \);
+        
+        \( \cell{0.5}{0.5}{1}{1} \);
+        \( \cellw{1}{0.5}{1.5}{1} \);
+        \( \cellw{1.5}{0.5}{2}{1} \);
+        \( \cellw{2}{0.5}{2.5}{1} \);
+        
+        \( \cellw{0}{1}{0.5}{1.5} \);
+        \( \cell{0.5}{1}{1}{1.5} \);
+        \( \cell{1}{1}{1.5}{1.5} \);
+        \( \cellw{1.5}{1}{2}{1.5} \);
+        \( \cell{2}{1}{2.5}{1.5} \);
+        \( \cell{2.5}{1}{3}{1.5} \);
+        
+        \( \cell{0}{1.5}{0.5}{2} \);
+        \( \cellw{0.5}{1.5}{1}{2} \);
+        \( \cellw{1}{1.5}{1.5}{2} \);
+        \( \cell{1.5}{1.5}{2}{2} \);
+        \( \cellw{2}{1.5}{2.5}{2} \);
+        \( \cellw{2.5}{1.5}{3}{2} \);
+        
+        \( \cellw{0.5}{2}{1}{2.5} \);
+        \( \cellw{1}{2}{1.5}{2.5} \);
+        \( \cellw{1.5}{2}{2}{2.5} \);
+        \( \cell{2}{2}{2.5}{2.5} \);
+        
+        \( \cellw{1}{2.5}{1.5}{3} \);
+        \( \cellw{1.5}{2.5}{2}{3} \);
+    \end{tikzpicture}
+    </script>
+</div>
+
+I knew this enumeration would be brutal. And boy was I right. I didn't get anywhere close before my thesis deadline, and it so this problem sat in my notebook for over a year. Over that year, the problem  achieved a sort of white whale status in my mind, being the problem I knew existed but couldn't conquer. 
+
+That was until, I submitted my applications for graduate school. I had this brief period of reprieve between applications and restarting my studies that I knew I needed to use for this problem. I dedicated *many* nights to working on the myriad cases these pseudopolyforms exhibit. I wrote hundreds of lines of SageMath to confirm my enumeration results, and finally (finally) solved it. If we denote $\rho(\diamond_{n,m})$ as the number of minimal inscribed pseudopolyforms in the generalized aztec diamond, then we have the following generating function. 
+
+$$\begin{eqnarray*}
+    \sum_{n,m\geq 0} \rho(\diamond_{n,m})x^n y^m & = &  xy(2 \, x^{5} y - 11 \, x^{4} y^{2} + 9 \, x^{3} y^{3} - 11 \, x^{2} y^{4} + 2 \, x y^{5} \\
+    & - & 10 \, x^{4} y + 16 \, x^{3} y^{2} + 16 \, x^{2} y^{3} - 10 \, x y^{4}\\
+    & + & x^{4} + 15 \, x^{3} y - 21 \, x^{2} y^{2} + 15 \, x y^{3} + y^{4} - 8 \, x^{2} y - 8 \, x y^{2} \\
+    & - & 4 \, x^{2} + 5 \, x y - 4 \, y^{2} + 2 \, x + 2 \, y + 1 ) \\
+    & / & {\left(1 - 2 \, x - 2 \, y + x^{2} + x y + y^{2} \right)} {\left(1-x\right)}^{4} {\left(1-y\right)}^{4}
+\end{eqnarray*}$$
+
+"Look on my works, ye Mighty, and despair!"
 
 ## Further Questions
 
-1. Is there an overarching theorem for enumerating a given labelled graph $G$?
+1. Is there an overarching theorem for enumerating the minimal inscribed polyforms in a given labelled graph $G$?
