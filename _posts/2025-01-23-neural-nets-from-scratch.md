@@ -138,19 +138,15 @@ As VAEs served as the beginning of the generative AI boom, I set my sights next 
 
 Diffusion models, popularized in the famous paper [Denoising Diffusion Probabilistic Models](https://arxiv.org/abs/2006.11239), are the current state of the art for image generation. 
 
-Implementing one from scratch proved difficult. There were a series of reasons for this, including no CNN, no UNET, no GPU, TODO
+Implementing one from scratch proved difficult, especially for the limited tools I had already implemented. I had to make a proper diffusion model with no convolution layers (or skip connectios for UNET-like architectures) and no GPU-enabled training because I have not learned CuPy yet. 
 
-TODO
-
-I chose to train my network on the EMNIST dataset (as opposed to the MNIST dataset) for more striking final generation. This allows for "sentence generation", like below. 
+Regardless, I pushed forward. I chose to train my network on the EMNIST dataset (as opposed to the MNIST dataset) for more striking final generation. I used my previously implemented VAE to reduce the dimensionality of the input in an organized way. This allowed for conditional image generation to be done quickly on CPU only. I also wrote some code to structure the generations into short sentences, shown below.
 
 {:refdef: style="text-align: center;"}
 ![]({{ site.baseimg }}/assets/imagegen.gif)
 {: refdef}
 
-I had a lot of fun sending messages to my friends with the trained network. 
-
-TODO There was a fun bit of implementation as to how I would structure the letters to create the best-looking `.gif`.
+I had a lot of fun sending messages to my friends with the final trained network. 
 
 ## Reinforcement Learning from Scratch
 
@@ -164,12 +160,10 @@ I was surprised to find that not only have people written 2048 bots, but there i
 
 There was a gruelling episode of debugging my algorithm, so finally seeing the algorithm finally learning was one of the most satisfying moments of my programming journey. After training for 10,000 games, the agent achieves the 2048 tile 49.1% of the time, and achieves 4196 tile 1.5% of the time.
 
-Now that the bot was trained, the final step was hooking up the history of the game to play on the real game's visualizer. I cloned the original repo and changed the internal Javascript to play a JSON history to make the final animation. I showcased one of my agent's bests games in the following animation.
+Now that the bot was trained, the final step was hooking up the history of the game to play on the real game's visualizer. I cloned the original repo and changed the internal Javascript to play a JSON history to make the final animation. I decided to showcase one of my agent's best games, shown below.
 
 {:refdef: style="text-align: center;"}
 ![]({{ site.baseimg }}/assets/2048viz.gif)
 {: refdef}
 
-## Citations
-
-TODO
+This was one of my favorite animations to create, and I still enjoy watching it to this day.
