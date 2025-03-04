@@ -697,8 +697,12 @@ $$\begin{eqnarray*}
     & / & {\left(1 - 2 \, x - 2 \, y + x^{2} + x y + y^{2} \right)} {\left(1-x\right)}^{4} {\left(1-y\right)}^{4}
 \end{eqnarray*}$$
 
+It's hard to describe how much time this equation took to arrive at. All I can think of when I see this equation is:
+
 "Look on my works, ye Mighty, and despair!"
 
 ## Further Questions
 
 1. Is there an overarching theorem for enumerating the minimal inscribed polyforms in a given labelled graph $G$?
+
+Thank you for reading!
