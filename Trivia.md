@@ -11,7 +11,7 @@ I occassionally enjoy generating trivia questions for things I am interested in,
 - What character appears on screen for only the first and last movie (The Phantom Menace and Return of the Jedi)?
     - Bib Fortuna
 
-- List all characters who's name is spoken in a movie, and yet only appear in one scene (where a scene means cuts of a single location with no cuts to another location).
+- List all characters who's name is spoken in a movie, and yet only appear in one scene (where a scene means shots of a single location with no cuts to another location).
     - [Greedo](https://starwars.fandom.com/wiki/Greedo)
     - [Dexter Jestter](https://starwars.fandom.com/wiki/Dexter_Jettster)
     - [Cordé](https://starwars.fandom.com/wiki/Cord%C3%A9)
