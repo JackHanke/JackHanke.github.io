@@ -701,6 +701,8 @@ It's hard to describe how much time this equation took to arrive at. All I can t
 
 "Look on my works, ye Mighty, and despair!"
 
+After this I decided I would not be enumerating any more minimal inscribed polyforms. 
+
 ## Further Questions
 
 1. Is there an overarching theorem for enumerating the minimal inscribed polyforms in a given labelled graph $G$?
