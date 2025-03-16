@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Neural Networks from Scratch"
+title:  "[ML ⭐⭐⭐⭐] Neural Networks from Scratch"
 date:   2025-01-23 19:58:33 -0600
 categories: jekyll update
 ---
@@ -107,7 +107,9 @@ $$\frac{\partial C}{\partial w_{jk}^\ell} = a_k^{\ell-1}\delta_j^{\ell}$$ -->
 
 For a while I struggled with the intuition as to why the error would be defined as a gradient. Though Nielsen describes this well, it just seemed too perfect, and consequently took a long time to "sit right" with me.
 
-But after doing my own derivations for a small network, I felt as if I really could write a neural network from scratch. And that is what I did. After a series of stressful nights, I did complete the project. I encountered a series of difficult bugs, including after my network was running but failing to learn. The bug that took longest to find was an erroneous summation of the weight gradients in a batch, as opposed to an average. But after I weeded all these issues out, I'm happy to say I completed the project. 
+But after doing my own derivations for a small network, I felt as if I really could write a neural network from scratch. And that is what I did. After a series of stressful nights, I did complete the project. I encountered a series of difficult bugs, including after my network was running but failing to learn. The bug that took longest to find was an erroneous summation of the weight gradients in a batch, as opposed to an average. But after I weeded all these issues out, I'm happy to say I completed the project. Below is an interactive demo for MNIST using a network written and trained entirely from scratch. 
+
+TODO demo, [credit](https://www.nathom.dev/blog/mnist/)
 
 This level of understanding not only grounded my understanding of the topic, but it also further motivated my study of deep learning. Now that I had a neural network from scratch, what else could I do?
 
@@ -185,7 +187,7 @@ More specifically, the regularization loss is the [Kullback-Leibler divergence](
 
 $$\mathcal{L} = \mathcal{L}_{rec} + \mathcal{L}_{reg} = \frac{1}{2}\sum_{i}(x_i - x_i')^2 - \frac{1}{2}\sum_{i}(1+2\log(\sigma_i)-\mu_i^2-\sigma_i^2).$$
 
-Because I have yet to implement an automatic differentiation engine, and I couldn't find anything on the internet, I had to compute the gradients for a VAE by h4eand. I first rewrote the regularization portion of the loss to match the output of $E$, namely
+Because I have yet to implement an automatic differentiation engine, and I couldn't find anything on the internet, I had to compute the gradients for a VAE by hand. I first rewrote the regularization portion of the loss to match the output of $E$, namely
 
 $$\mathcal{L}_{reg} = \frac{1}{2}\exp(2\log\sigma) + \frac{1}{2}\mu^2 - \log\sigma - \frac{1}{2}.$$
 

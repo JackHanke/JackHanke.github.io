@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Minimal Inscribed Polyforms"
+title:  "[MATH ⭐⭐⭐⭐] Minimal Inscribed Polyforms"
 date:   2025-01-23 19:58:32 -0600
 categories: jekyll update
 ---
