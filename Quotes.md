@@ -44,3 +44,7 @@ It is hard to try something new, and even harder to make a living out of it. A c
 <p style="text-align:center;"><i> - Vladimir Nabokov, Pale Fire: A Poem in Four Cantos </i></p>
 
 ... interlinked.
+
+<p style="text-align:center;"><i> If all of human knowledge, everything that’s known, is believed to be an enormous hierarchic structure, then the high country of the mind is found at the uppermost reaches of this structure in the most general, the most abstract considerations of all. Few people travel here. There’s no real profit to be made from wandering through it, yet like this high country of the material world all around us, it has its own austere beauty that to some people makes the hardships of traveling through it seem worthwhile. - Robert Pirsig, Zen and the Art of Motorcycle Maintenance </i></p>
+
+Sometimes I wonder if I myself ever have questions and ideas that belong to this high country. Probably not, but maybe.
