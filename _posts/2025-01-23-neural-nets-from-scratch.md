@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "[ML ⭐⭐⭐⭐] Neural Networks from Scratch"
+title:  "[ML] Neural Networks from Scratch"
 date:   2025-01-23 19:58:33 -0600
 categories: jekyll update
 ---
 
-[NN GitHub Repo 👾](https://github.com/JackHanke/nets) | [RL GitHub Repo 👾](https://github.com/JackHanke/2048rl)
+| [NN GitHub Repo 👾](https://github.com/JackHanke/nets) | [RL GitHub Repo 👾](https://github.com/JackHanke/2048rl) | **Scope:** ⭐⭐⭐⭐ |
 
 ## Wow Machine Learning is Cool
 

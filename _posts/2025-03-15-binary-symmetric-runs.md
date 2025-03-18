@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "[MATH ⭐] Symmetric Runs in Binary Sequences"
+title:  "[MATH ] Symmetric Runs in Binary Sequences"
 date:   2025-03-15 12:58:32 -0600
 categories: jekyll update
 ---
 
-| [GitHub Repo 👾](https://github.com/JackHanke/binaryruns) | 
+| [GitHub Repo 👾](https://github.com/JackHanke/binaryruns) | **Scope:** ⭐ |
 
 ## LeetCode for Fun
 
