@@ -56,6 +56,10 @@ A measles outbreak in 2025.
 
 "Knowledge is power" is probably the overarching theme of humanity. The accomplishments between [YBC 7289](https://en.wikipedia.org/wiki/YBC_7289) and the [LHC](https://en.wikipedia.org/wiki/Large_Hadron_Collider) are everything great about being human.
 
-<p style="text-align:center;"><i> Religion is regarded by the common people as true, by the wise as false, and by the rulers as useful.  - Seneca the Younger </i></p>
+<p style="text-align:center;"><i> "Religion is regarded by the common people as true, by the wise as false, and by the rulers as useful."  - Seneca the Younger </i></p>
 
 As if anyone can say if religion is "true" or "false" Seneca. I still like the church and the state seperated though.
+
+<p style="text-align:center;"><i> "Science is what we understand well enough to explain to a computer. Art is everything else we do." - Donald Knuth </i></p>
+
+I heard this quote after reading the book $A=B$ by Marko Petkovsek, Herbert Wilf and Doron Zeilberger. I am still amazed that something like simplifying finite sums has an algorithm. What a time to be alive! 
