@@ -4,16 +4,15 @@ title: Quotes
 permalink: /quotes/
 ---
 
-### A collection of quotes that I enjoy, think about, and want to share.
+### Some of my favorite quotes. 
 
 <p style="text-align:center;"><i> "Man is the only animal that refuses to be what he is." - Albert Camus, Carnets </i></p>
 
-Like my favorite song, America's *A Horse with No Name*, it's about something different everytime I hear it. 
+Like my favorite song, America's *A Horse with No Name*, it's about something different everytime I hear it. Maybe that's what Camus was getting at...
 
 <p style="text-align:center;"><i> "Someday is not a day of the week." - Janet Dailey </i></p>
 
-I hate motivational quotes, because they are too often so corny they fail to motivate. This one succeeds.
-
+I hate motivational quotes; they are too often unbearably corny. For some reason, this one succeeds for me.
 
 <p style="text-align:center;"><i> When we are tired, we are attacked by ideas we conquered long ago. - Friedrich Nietzsche </i></p>
 
@@ -48,3 +47,15 @@ It is hard to try something new, and even harder to make a living out of it. A c
 <p style="text-align:center;"><i> If all of human knowledge, everything that’s known, is believed to be an enormous hierarchic structure, then the high country of the mind is found at the uppermost reaches of this structure in the most general, the most abstract considerations of all. Few people travel here. There’s no real profit to be made from wandering through it, yet like this high country of the material world all around us, it has its own austere beauty that to some people makes the hardships of traveling through it seem worthwhile. - Robert Pirsig, Zen and the Art of Motorcycle Maintenance </i></p>
 
 Sometimes I wonder if I myself ever have questions and ideas that belong to this high country. Probably not, but maybe.
+
+<p style="text-align:center;"><i> "There is a cult of ignorance in the United States, and there has always been. The strain of anti-intellectualism has been a constant thread winding its way through our political and cultural life, nurtured by the false notion that democracy means that 'my ignorance is just as good as your knowledge." - Isaac Asimov </i></p>
+
+A measles outbreak in 2025.
+
+<p style="text-align:center;"><i> "Scientia potentia est" - Thomas Hobbes </i></p>
+
+"Knowledge is power" is probably the overarching theme of humanity. The accomplishments between [YBC 7289](https://en.wikipedia.org/wiki/YBC_7289) and the [LHC](https://en.wikipedia.org/wiki/Large_Hadron_Collider) are everything great about being human.
+
+<p style="text-align:center;"><i> Religion is regarded by the common people as true, by the wise as false, and by the rulers as useful.  - Seneca the Younger </i></p>
+
+As if anyone can say if religion is "true" or "false" Seneca. I still like the church and the state seperated though.
