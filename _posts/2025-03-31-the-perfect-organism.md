@@ -73,4 +73,4 @@ Thank you for reading!
 
 ## Sources
 
-Bostrom, N. The Superintelligent Will: Motivation and Instrumental Rationality in Advanced Artificial Agents. Minds & Machines 22, 71–85 (2012). https://doi.org/10.1007/s11023-012-9281-3
+Bostrom, N. The Superintelligent Will: Motivation and Instrumental Rationality in Advanced Artificial Agents. Minds & Machines 22, 71–85 (2012). [https://doi.org/10.1007/s11023-012-9281-3](https://link.springer.com/article/10.1007/s11023-012-9281-3)
