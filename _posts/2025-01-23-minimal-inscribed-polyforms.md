@@ -275,7 +275,7 @@ My thesis was essentially a catalogue of $8$ of these families, and a few patter
 My favorite family I enumerated was a triangle made of hexagons, where inscription meant touching all corner hexagons of the triangle. Let $\triangle_n$ represent a triangle with a side made up of $n$ hexagons. Below is an animation of all $41$ minimal inscribed polyforms in $\triangle_5$.
 
 {:refdef: style="text-align: center;"}
-![]({{ site.baseimg }}/assets/hex.gif)
+![]({{ site.baseimg }}/assets/hex2.gif)
 {: refdef}
 
 *Theorem 2.* The number of minimal inscribed polyforms $\rho(\triangle_n)$ for $n\geq 2$ is given by the following formula.
