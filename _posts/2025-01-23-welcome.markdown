@@ -12,7 +12,7 @@ I have tried other mediums to summarize my projects, but I've found that a forma
 
 The posts will naturally vary in the amount of work and scope they achieve. I sometimes work on small "cute" math problems, and other times I spend months studying and programming a new algorithm.  
 
-Because of this, I have included a `[BLOG]`, `[MATH]`, or `[ML]` tag in the title to my posts to further inform the reader. I have also included a "level-of-scope" and/or a "level-of-difficult" indicator for a specific post located with the repo links. This scope rating is indicated with the number of stars (⭐) following the tag, up to a possible of 5. 
+Because of this, I have included a `[BLOG]`, `[MATH]`, or `[MLCS]` tag in the title to my posts to further inform the reader. I have also included a "level-of-scope" and/or a "level-of-difficult" indicator for a specific post located with the repo links. This scope rating is indicated with the number of stars (⭐) at the beginning of the post, up to a possible of 5. 
 
 Another goal of my blog is to inspire. My posts will often include a section with further questions for you the reader to take on! 
 

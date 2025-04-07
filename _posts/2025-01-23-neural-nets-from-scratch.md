@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[ML] Neural Networks from Scratch"
+title:  "[MLCS] Neural Networks from Scratch"
 date:   2025-01-23 19:58:33 -0600
 categories: jekyll update
 ---
