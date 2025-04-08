@@ -6,6 +6,10 @@ permalink: /quotes/
 
 ### Some of my favorite quotes. 
 
+<p style="text-align:center;"><i> "If you want to build a ship, don’t drum up the men to gather wood, divide the work, and give orders. Instead, teach them to yearn for the vast and endless sea." - Antoine de Saint-Exupéry </i></p>
+
+My highschool yearbook quote. 
+
 <p style="text-align:center;"><i> "Man is the only animal that refuses to be what he is." - Albert Camus, Carnets </i></p>
 
 Like my favorite song, America's *A Horse with No Name*, it's about something different everytime I hear it. Maybe that's what Camus was getting at...
