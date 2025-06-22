@@ -3,3 +3,6 @@ _site
 .jekyll-cache
 .jekyll-metadata
 vendor
+
+# temp post in progress
+_posts/2025-04-21-why-ai.md
