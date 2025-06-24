@@ -8,7 +8,7 @@ Other blogs I often read:
 
 - Alex Irpan's [Sorta Insightful](https://www.alexirpan.com/)
 
-The blog I have modelled my own after, and not just the styling. 
+The blog I have modeled my own after, and not just the styling. 
 
 A blog I see 
 - David MacKay's [Everything is Connected](https://itila.blogspot.com/)
@@ -18,3 +18,8 @@ I had the pleasure of watching [David MacKay's Information Theory Lectures](http
 - Julian Schrittwieser's [Furidamu](https://www.furidamu.org/)
 
 Julian's work is the reason I study machine learning. 
+
+- [Ethan Smith's Blog](https://www.ethansmith2000.com/)
+
+Ethan's story is very inspirational to me.
+

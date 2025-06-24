@@ -50,6 +50,10 @@ This served as my first proper introduction to modern language modeling. It was 
 
 It's hard to understate how influential this paper was. Unhobbling large language models by providing a chain of thought turned out to be a whole new paradigm in scaling intelligence. 
 
+- ✔️ [Why do LLMs attend to the first token?](https://arxiv.org/pdf/2504.02732)
+
+This paper sorta convinced me there has got to be something better than the transformer if it's just throwing most of the attention into the first token. It just seems very... hacky.
+
 - [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](https://arxiv.org/abs/2205.14135)(2022)
 
 *TO READ*
