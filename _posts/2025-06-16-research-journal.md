@@ -54,6 +54,10 @@ It's hard to understate how influential this paper was. Unhobbling large languag
 
 This paper sorta convinced me there has got to be something better than the transformer if it's just throwing most of the attention into the first token. It just seems very... hacky.
 
+- ✔️ [Train Short, Test Long: Attention with Linear Biases Enables Input Length Extrapolation](https://arxiv.org/abs/2108.12409)
+
+When I read this paper I was like ohhhhhhhhh now I get how these things work. Finally.
+
 - [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](https://arxiv.org/abs/2205.14135)(2022)
 
 *TO READ*
