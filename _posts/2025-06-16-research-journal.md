@@ -108,13 +108,14 @@ From what I know, it's been unchallenged for over a decade. I implemented this o
 
 *TO READ*
 
-- [Layer Normalization](https://arxiv.org/pdf/1607.06450)
+- [Dropout: A Simple Way to Prevent Neural Networks from Overfitting](https://www.cs.toronto.edu/~rsalakhu/papers/srivastava14a.pdf)
 
 *TO READ*
 
-- [Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift](https://arxiv.org/abs/1502.03167) (2015)
+- ✔️ [Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift](https://arxiv.org/abs/1502.03167) (2015)
+- ✔️ [Layer Normalization](https://arxiv.org/pdf/1607.06450)
 
-*TO READ*
+A really good machine learning paper is as simple as it is effective. 
 
 - [Overcoming catastrophic forgetting in neural networks](https://arxiv.org/pdf/1612.00796) (2017)
 
