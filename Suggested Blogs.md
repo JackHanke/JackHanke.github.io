@@ -23,3 +23,6 @@ Julian's work is the reason I study machine learning.
 
 Ethan's story is very inspirational to me. Also "SoftMax Attention is a Fluke".
 
+- [Neel Nanda's Blog](https://www.neelnanda.io/about)
+
+Him and Robert Miles are trying their hardest.
