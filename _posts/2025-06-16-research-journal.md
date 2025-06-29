@@ -96,6 +96,10 @@ The word Grok is ruined now, but it was nice while it lasted.
 ## How do I train my model?
 The actual training of neural networks requires more than just the gradients. So many of deep learnings modifications come from the ability to properly train larger models.
 
+- ✔️ [Understanding the difficulty of training deep feedforward neural networks](https://proceedings.mlr.press/v9/glorot10a/glorot10a.pdf) (2010)
+
+Was digging around some of the PyTorch source code and found a reference to this paper in the comments.
+
 - ✔️ [Adam: A Method for Stochastic Optimization](https://arxiv.org/abs/1412.6980) (2014)
 
 From what I know, it's been unchallenged for over a decade. I implemented this one myself, and wasn't able to get my VAE to learn anything without it. 
@@ -140,6 +144,8 @@ This section contains various improvements to architectures.
 
 *TO READ*
 
+- [Decision Transformer: Reinforcement Learning via Sequence Modeling](https://arxiv.org/abs/2106.01345)
+
 ## Specific Models
 Some models get all the attention.
 
@@ -167,6 +173,8 @@ Neural networks are amazing, but there are other architectures out there. Can an
 
 This pair of papers is one of the most exciting lines of research I've read. Even with the huge cost to training time, the insane speed of inference should catch any researcher's eye. I plan on making an animation for LGN learning because I think it will look cool.
 
+- [The Forward-Forward Algorithm: Some Preliminary Investigations](https://arxiv.org/abs/2212.13345) (2022)
+
 ## Safety & the Future
 The future is in our (really just ~500 people that aren't me) hands.
 
@@ -185,7 +193,7 @@ Instrumental convergence is such an important idea that I wrote a whole blog pos
 ## Biology and Evolution
 Neural networks are loosely (loosely) based on the brain. What about algorithms that are more closely linked with brain function?
 
-- ✔️ [A Survey on Brain-Inspired Deep Learning via Predictive Coding](https://arxiv.org/pdf/2308.07870)
+- [A Survey on Brain-Inspired Deep Learning via Predictive Coding](https://arxiv.org/pdf/2308.07870)
 
 This is another very exciting direction of research. The global updates of backprop do feel very artificial, and PC's focus on local updates is very intriguing.
 
@@ -193,12 +201,18 @@ This is another very exciting direction of research. The global updates of backp
 
 *TO READ*
 
-## Miscellaneous
-And finally the papers that don't fit.
+- [Continuous Thought Machines](https://arxiv.org/pdf/2505.05522)
+
+*TO READ*
+
+## Interpretability
+Wait what is the program I made doing?
 
 - [Stochastic Neighbor Embedding](https://proceedings.neurips.cc/paper_files/paper/2002/file/6150ccc6069bea6b5716254057a194ef-Paper.pdf)
 
 *TO READ*
+
+- [A Survey on Sparse Autoencoders: Interpreting the Internal Mechanisms of Large Language Models](https://arxiv.org/abs/2503.05613)
 
 ## Other resources
 Research papers are great, but there are many ways to get information on the concepts and pace of the field. 
@@ -210,3 +224,7 @@ Research papers are great, but there are many ways to get information on the con
 - ✔️ [Transformer Math 101](https://blog.eleuther.ai/transformer-math/)
 
 This is great for planning your next decoder-only transformer!
+
+- [Spinning Up on Deep RL](https://spinningup.openai.com/en/latest/)
+
+*TO READ*

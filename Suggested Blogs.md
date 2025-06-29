@@ -21,5 +21,5 @@ Julian's work is the reason I study machine learning.
 
 - [Ethan Smith's Blog](https://www.ethansmith2000.com/)
 
-Ethan's story is very inspirational to me.
+Ethan's story is very inspirational to me. Also "SoftMax Attention is a Fluke".
 

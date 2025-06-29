@@ -4,7 +4,7 @@ title: Trivia
 permalink: /trivia/
 ---
 
-I occassionally enjoy generating trivia questions for things I am interested in, especially the original six Star Wars movies.
+I occasionally enjoy generating trivia questions for things I am interested in, especially the original six Star Wars movies.
 
 ## Star Wars Trivia
 
@@ -18,7 +18,7 @@ I occassionally enjoy generating trivia questions for things I am interested in,
     - [General Crix Madine](https://starwars.fandom.com/wiki/Crix_Madine)
     - [Queen Jamilia](https://starwars.fandom.com/wiki/Jamillia)
     - [Jedi Padawan Liam](https://starwars.fandom.com/wiki/Liam)
-    - TODO possibly incomplete!
+    - TODO
 
 - Similarly, what character is named the most but seen the least? (Which character has the highest ratio between instances named and distinct scenes appeared.)
     - TODO
