@@ -228,3 +228,7 @@ This is great for planning your next decoder-only transformer!
 - [Spinning Up on Deep RL](https://spinningup.openai.com/en/latest/)
 
 *TO READ*
+
+- [On the Biology of a Large Language Model](https://transformer-circuits.pub/2025/attribution-graphs/biology.html)
+
+*TO READ*
