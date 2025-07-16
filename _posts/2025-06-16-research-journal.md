@@ -93,6 +93,8 @@ The word Grok is ruined now, but it was nice while it lasted.
 
 *TO READ*
 
+- [Deep Reinforcement Learning with Double Q-learning](https://arxiv.org/pdf/1509.06461)
+
 ## How do I train my model?
 The actual training of neural networks requires more than just the gradients. So many of deep learnings modifications come from the ability to properly train larger models.
 
@@ -174,6 +176,12 @@ Neural networks are amazing, but there are other architectures out there. Can an
 This pair of papers is one of the most exciting lines of research I've read. Even with the huge cost to training time, the insane speed of inference should catch any researcher's eye. I plan on making an animation for LGN learning because I think it will look cool.
 
 - [The Forward-Forward Algorithm: Some Preliminary Investigations](https://arxiv.org/abs/2212.13345) (2022)
+
+*TO READ*
+
+- [Liquid Time-constant Networks](https://arxiv.org/pdf/2006.04439)
+
+*TO READ*
 
 ## Safety & the Future
 The future is in our (really just ~500 people that aren't me) hands.
