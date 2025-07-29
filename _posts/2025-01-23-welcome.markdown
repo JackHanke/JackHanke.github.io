@@ -1,0 +1,19 @@
+---
+layout: post
+title:  "[BLOG] A Welcome"
+date:   2025-01-23 10:58:32 -0600
+categories: jekyll update
+---
+Welcome to my website!
+
+I usually write about machine learning and mathematics. My intention with these blogposts is to tell the story of my projects as much as it is to show the results. I am of the opinion that educational outreach in these topics often fails to convey the story the work is so often accompanied by. 
+
+I have tried other mediums to summarize my projects, but I've found that a formal writeup often loses the story, while a YouTube video often loses the rigor. I think the blogpost is a perfect mix of these two mediums. 
+
+The posts will naturally vary in the amount of work and scope they achieve. I sometimes work on small "cute" math problems, and other times I spend months studying and programming a new algorithm.  
+
+Because of this, I have included a `[BLOG]`, `[MATH]`, or `[MLCS]` tag in the title to my posts to further inform the reader. I have also included a "level-of-scope" and/or a "level-of-difficult" indicator for a specific post located with the repo links. This scope rating is indicated with the number of stars (⭐) at the beginning of the post, up to a possible of 5. 
+
+Another goal of my blog is to inspire. My posts will often include a section with further questions for you the reader to take on! 
+
+Thank you for reading!
