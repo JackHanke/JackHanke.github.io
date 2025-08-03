@@ -9,7 +9,7 @@ image:
   path: /assets/img/waititsallfromscratch.png
 ---
 
-| [GitHub Repo 👾](https://github.com/JackHanke/nets) | **Scope:** ⭐⭐⭐ |
+| [GitHub Repo](https://github.com/JackHanke/nets) 👾 | **Scope:** ⭐⭐⭐ |
 
 ## Learning is compression
 

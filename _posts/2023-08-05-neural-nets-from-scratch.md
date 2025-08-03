@@ -9,7 +9,7 @@ image:
   path: assets/img/soreal.jpg
 ---
 
-| [GitHub Repo 👾](https://github.com/JackHanke/nets) | **Scope:** ⭐⭐⭐ |
+| [GitHub Repo](https://github.com/JackHanke/nets) 👾 | **Scope:** ⭐⭐⭐ |
 
 ## Wow Machine Learning is Cool
 

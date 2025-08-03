@@ -9,7 +9,7 @@ image:
   path: assets/img/calvin.jpg
 ---
 
-| [GitHub Repo 👾](https://github.com/JackHanke/binaryruns) | **Scope:** ⭐ |
+| [GitHub Repo](https://github.com/JackHanke/binaryruns) 👾 | **Scope:** ⭐ |
 
 ## LeetCode for Fun
 

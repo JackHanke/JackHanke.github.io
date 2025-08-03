@@ -9,7 +9,7 @@ image:
   path: assets/img/imagegen.gif
 ---
 
-| [GitHub Repo 👾](https://github.com/JackHanke/nets) | **Scope:** ⭐⭐⭐ |
+| [GitHub Repo](https://github.com/JackHanke/nets) 👾 | **Scope:** ⭐⭐⭐ |
 
 ## Wait... computers can draw now?
 

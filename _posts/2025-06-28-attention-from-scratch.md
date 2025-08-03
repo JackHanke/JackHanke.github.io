@@ -9,7 +9,7 @@ image:
   path: /assets/img/oopsallfromscratch.jpg
 ---
 
-| [GitHub Repo 👾](https://github.com/JackHanke/nets) | **Scope:** ⭐⭐⭐ |
+| [GitHub Repo](https://github.com/JackHanke/nets) 👾 | **Scope:** ⭐⭐⭐ |
 
 For my final "from scratch, `NumPy`-only" neural network architecture, I decided to tackle *multi-head attention*. Multi-head attention, originally introduced in 2017 in the famous [Attention Is All You Need](https://arxiv.org/abs/1706.03762) paper, now runs the world. It is the core component in any state-of-the-art architecture, and is essential to have in your machine learning toolkit. The forward pass is:
 

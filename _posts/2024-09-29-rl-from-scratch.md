@@ -9,7 +9,7 @@ image:
   path: assets/img/viz.gif
 ---
 
-| [GitHub Repo 👾](https://github.com/JackHanke/2048rl) | **Scope:** ⭐⭐⭐ |
+| [GitHub Repo](https://github.com/JackHanke/2048rl) 👾 | **Scope:** ⭐⭐⭐ |
 
 ## Pavlov's program
 

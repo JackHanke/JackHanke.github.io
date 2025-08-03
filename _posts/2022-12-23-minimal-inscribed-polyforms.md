@@ -9,7 +9,7 @@ image:
   path: assets/img/polyomino.jpg
 ---
 
-| [GitHub Repo 👾](https://github.com/JackHanke/minimal-inscribed-polyforms) | [YouTube Video 📺](https://www.youtube.com/watch?v=8N80EbXVUU0) | **Scope:** ⭐⭐⭐⭐ |
+| [GitHub Repo](https://github.com/JackHanke/minimal-inscribed-polyforms) 👾 | [YouTube Video](https://www.youtube.com/watch?v=8N80EbXVUU0) 📺 | **Scope:** ⭐⭐⭐⭐ |
 
 ## A Global Pandemic
 
