@@ -58,7 +58,6 @@ The portion of the network that maps the input to the latent space is called the
     </script>
 </div>
 
-
 If we denote $x$ as the input and $x'$ as the reconstruction, an autoencoder might use the sum of squared errors loss function to train on, like so.
 
 $$\mathcal{L} = \frac{1}{2}\sum_{i}(x_i - x_i')^2$$
