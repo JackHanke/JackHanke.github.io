@@ -49,7 +49,7 @@ My generation's curse.
 
 <p style="text-align:center;"><i> "There is nothing more difficult to take in hand, more perilous to conduct, or more uncertain in its success than to take the lead in the introduction of a new order of things, because the innovator has for enemies all those who have done well under the old condition, and lukewarm defenders in those who may do well under the new." </i></p>
 
-<p style="text-align:right;"><i> Niccolò Machiavelli, The Princev </i></p>
+<p style="text-align:right;"><i> Niccolò Machiavelli, The Prince </i></p>
 
 It is hard to try something new, and even harder to make a living out of it. A career that didn't exist 15 years ago is a scary one to pick up. 
 

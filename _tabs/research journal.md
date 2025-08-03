@@ -5,7 +5,7 @@ order: 1
 math: true
 ---
 
-The ML research I have read and want to read. The resources are organized into categories, and preceded with a check mark (✔️) if I have read them. I also add a short blurb about my thoughts on the paper.
+A collection of the machine learning research I have read and want to read. The resources are organized into categories, and preceded with a check mark (✔️) if I have read them. I also add a short blurb about my thoughts on the paper.
 
 ---
 
@@ -48,7 +48,7 @@ Language modeling is both the most promising subfield of AI, as well as the most
 
 This served as my first proper introduction to modern language modeling. It was a long read, but well worth it. All the different design choices inspired me to choose my own and try it out. A post on this effort is soon coming.
 
-- ✔️ [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903)(2022)
+- ✔️ [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903 ) (2022)
 
 It's hard to understate how influential this paper was. Unhobbling large language models by providing a chain of thought turned out to be a whole new paradigm in scaling intelligence. 
 
@@ -60,7 +60,16 @@ This paper sorta convinced me there has got to be something better than the tran
 
 When I read this paper I was like oh now I get how these things work. Finally.
 
-- [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](https://arxiv.org/abs/2205.14135)(2022) *TO READ*
+- [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](https://arxiv.org/abs/2205.14135) (2022) *TO READ*
+
+---
+
+## Image Generation
+Image generation is just the coolest.
+
+- [Learning Transferable Visual Models From Natural Language Supervision](https://arxiv.org/abs/2103.00020) (2021) *TO READ*
+
+- [Classifier-Free Diffusion Guidance](https://arxiv.org/abs/2207.12598) (2022) *TO READ*
 
 ---
 
@@ -136,15 +145,15 @@ A really good machine learning paper is as simple as it is effective.
 ## Improvements to the Classics
 This section contains various improvements to architectures.
 
-- [Classifier-Free Diffusion Guidance](https://arxiv.org/abs/2207.12598) (2022) *TO READ*
-
 - [Reflexion: Language Agents with Verbal Reinforcement Learning](https://arxiv.org/abs/2303.11366) (2023) *TO READ*
 
 - [Decision Transformer: Reinforcement Learning via Sequence Modeling](https://arxiv.org/abs/2106.01345) (2021) *TO READ*
 
 - [Multi-Game Decision Transformers](https://arxiv.org/abs/2205.15241) (2022) *TO READ*
 
-- [Scaling Laws For Diffusion Transformers](https://arxiv.org/pdf/2410.08184) *TO READ*
+- [Scaling Laws For Diffusion Transformers](https://arxiv.org/pdf/2410.08184) (2024) *TO READ*
+
+- [Hierarchical Reasoning Model](https://arxiv.org/pdf/2506.21734) (2025) *TO READ*
 
 ## Specific Models
 Some models get all the attention.
@@ -171,14 +180,14 @@ This pair of papers is one of the most exciting lines of research I've read. Eve
 
 - [The Forward-Forward Algorithm: Some Preliminary Investigations](https://arxiv.org/abs/2212.13345) (2022) *TO READ*
 
-- [Liquid Time-constant Networks](https://arxiv.org/pdf/2006.04439) *TO READ*
+- [Liquid Time-constant Networks](https://arxiv.org/pdf/2006.04439) (2020) *TO READ*
 
 ---
 
 ## Safety & the Future
 The future is in our (really just ~500 people that aren't me) hands.
 
-- ✔️ [The Superintelligent Will: Motivation and Instrumental Rationality in Advanced Artificial Agents](https://link.springer.com/article/10.1007/s11023-012-9281-3)(2012)
+- ✔️ [The Superintelligent Will: Motivation and Instrumental Rationality in Advanced Artificial Agents](https://link.springer.com/article/10.1007/s11023-012-9281-3) (2012)
 
 Instrumental convergence is such an important idea that I wrote a whole blog post on it!
 
