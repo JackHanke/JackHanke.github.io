@@ -69,7 +69,13 @@ Image generation is just the coolest.
 
 - [Learning Transferable Visual Models From Natural Language Supervision](https://arxiv.org/abs/2103.00020) (2021) *TO READ*
 
+- [Denoising Diffusion Implicit Models](https://arxiv.org/abs/2010.02502) (2020) *TO READ*
+
 - [Classifier-Free Diffusion Guidance](https://arxiv.org/abs/2207.12598) (2022) *TO READ*
+
+- [Score-Based Generative Modeling through Stochastic Differential Equations](https://arxiv.org/abs/2011.13456) (2021) *TO READ*
+
+- [Flow Matching for Generative Modeling](https://arxiv.org/abs/2210.02747) (2023) *TO READ*
 
 ---
 
