@@ -77,6 +77,7 @@ Image generation is just the coolest.
 
 - [Flow Matching for Generative Modeling](https://arxiv.org/abs/2210.02747) (2023) *TO READ*
 
+- [Hierarchical Text-Conditional Image Generation with CLIP Latents](https://cdn.openai.com/papers/dall-e-2.pdf) (2022) *TO READ*
 ---
 
 ## Training Theory and Improvements
