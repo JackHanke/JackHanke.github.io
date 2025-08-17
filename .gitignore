@@ -23,3 +23,9 @@ package-lock.json
 !.vscode/tasks.json
 
 # Misc
+
+## temp for new posts
+_posts/2025-08-09-making-a-chess-engine.md
+_posts/2025-08-10-making-an-llm.md
+_posts/2025-08-15-generating-mc-skins.md
+_posts/2025-08-16-breakout-rl.md

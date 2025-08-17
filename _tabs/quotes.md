@@ -1,7 +1,7 @@
 ---
 # layout: tags
 icon: fa fa-commenting
-order: 2
+order: 4
 math: true
 ---
 
@@ -11,7 +11,7 @@ math: true
 
 <p style="text-align:right;"><i> Antoine de Saint-Exupéry </i></p>
 
-My high school yearbook quote. 
+This was my high school yearbook quote. I think curating a true obsession for learning is the real way to learn and grow.
 
 ---
 
@@ -35,7 +35,7 @@ I hate motivational quotes; they are too often unbearably corny. For some reason
 
 <p style="text-align:right;"><i> Friedrich Nietzsche </i></p>
 
-Nietzsche's most relatable quote. 
+This is Nietzsche's most relatable quote. It's amazing what a good night's rest can do.
 
 ---
 
@@ -43,7 +43,7 @@ Nietzsche's most relatable quote.
 
 <p style="text-align:right;"><i> Yuval Noah Harari, Homo Deus: A History of Tomorrow </i></p>
 
-My generation's curse.
+My generation's curse is growing up with infinite, immediate information. This quote reminds me of *Everything, Everywhere, All at Once*.
 
 ---
 
@@ -67,7 +67,7 @@ It is hard to try something new, and even harder to make a living out of it. A c
 
 <p style="text-align:right;"><i> Vladimir Nabokov, Pale Fire: A Poem in Four Cantos </i></p>
 
-... interlinked.
+... interlinked. Blade Runner 2049 is an awesome movie.
 
 ---
 
