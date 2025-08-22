@@ -108,13 +108,17 @@ This paper studies how well large language models generalize with increasing sca
 
 - ✔️ [Grokking: Generalization Beyond Overfitting on Small Algorithmic Datasets](https://arxiv.org/abs/2201.02177) (2022)
 
-This paper discusses the phenomena where significant improvements in test loss can come rapidly, long after training loss has bottomed out. This rapid decrease in test loss is called Grokking. Nowadays the word Grok is ruined, but it was nice while it lasted.
+This paper discusses the phenomena where significant improvements in test loss can come rapidly, long after training loss has bottomed out. This rapid decrease in test loss is called grokking. The cause of grokking was deeply studied in a [blogpost by Neel Nanda](https://www.alignmentforum.org/posts/N6WM6hs7RQMKDhYjB/a-mechanistic-interpretability-analysis-of-grokking), where he determined the underlying anlgorithm learned by a transformer to do mod $113$ arithmetic. He showed that grokking is affected by how much data is available to train on compared with the total dataset (in this case $113^2$ datapoints), among other results.  Nowadays the word grok is ruined, but it was nice while it lasted.
 
 - [The Era of 1-bit LLMs: All Large Language Models are in 1.58 Bits](https://arxiv.org/abs/2402.17764) (2024) *TO READ*
 
-- [Deep Reinforcement Learning with Double Q-learning](https://arxiv.org/pdf/1509.06461) (2015) *TO READ*
+- ✔️ [Deep Reinforcement Learning with Double Q-learning](https://arxiv.org/pdf/1509.06461) (2015) 
 
-- [The Difficulty of Passive Learning in Deep Reinforcement Learning](https://arxiv.org/abs/2110.14020) (2021) *TO READ*
+This paper introduces a modification to deep Q-learning towards double Q-learning that improves performance on Atari. The idea is to have a time-lagged version of the online policy predict the value of the action in the update equation, while the online policy is used to select actions. This acts to decouple the choice of estimating Q values and selecting actions (in the style of double Q-learning), but without splitting training among two networks as traditional double Q-learning would imply.
+
+- ✔️ [The Difficulty of Passive Learning in Deep Reinforcement Learning](https://arxiv.org/abs/2110.14020) (2021)
+
+This paper shows that offline RL learning exhibits a performance decrease from online RL algorithms even when the offline learner trains on data from the actions and experiences of the online learner. They compare this to the 1963 psychology experiment by Held and Hein called the [Kitten carosel](https://www.simplypsychology.org/held-and-hein-1963.html), and do a thorough ablation study of what causes the tandem effect. They conclude that the source of the tandem effect is in the combination of deep function approximation and insufficient data of non-greedy actions. Overall, this paper emphasizes the role of interactivity in the learning process and provides a framework for understanding the differences in online and offline learning.
 
 - ✔️ [The Platonic Representation Hypothesis](https://arxiv.org/abs/2405.07987) (2024)
 
@@ -178,8 +182,6 @@ Some models get all the attention.
 - ✔️ [Mastering the game of Go without human knowledge](https://www.nature.com/articles/nature24270) (2017)
 
 This paper covers Google Deepmind's AlphaGo Zero self-play training pipeline. Incredibly, they showed that (at least at the time) that pure-RL learns better representations than supervised learning. The news of this result was my original inspiration for learning ML. My friend Dan and I replicated this paper with tictactoe in grad school. 
-
-- [DistilBERT, a distilled version of BERT: smaller, faster, cheaper and lighter](https://arxiv.org/abs/1910.01108) (2019) *TO READ*
 
 ---
 

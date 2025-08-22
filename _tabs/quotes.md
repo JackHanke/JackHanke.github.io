@@ -11,7 +11,7 @@ math: true
 
 <p style="text-align:right;"><i> Antoine de Saint-Exupéry </i></p>
 
-This was my high school yearbook quote. I think curating a true obsession for learning is the real way to learn and grow.
+This was my high school yearbook quote. I try to live by these words.
 
 ---
 
@@ -84,5 +84,3 @@ Sometimes I wonder if I myself ever have questions and ideas that belong to this
 <p style="text-align:right;"><i> Donald Knuth </i></p>
 
 I heard this quote after reading the book $A=B$ by Marko Petkovsek, Herbert Wilf and Doron Zeilberger. I am still amazed that something like simplifying finite sums has an algorithm. What a time to be alive! 
-
----
