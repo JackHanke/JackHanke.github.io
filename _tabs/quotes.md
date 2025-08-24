@@ -5,6 +5,8 @@ order: 4
 math: true
 ---
 
+I collect quotes that I like. Here are some!
+
 ---
 
 <p style="text-align:center;"><i> "If you want to build a ship, don’t drum up the men to gather wood, divide the work, and give orders. Instead, teach them to yearn for the vast and endless sea."</i></p> 

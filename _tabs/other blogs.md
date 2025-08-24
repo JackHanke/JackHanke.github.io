@@ -1,5 +1,6 @@
 ---
-# layout: tags
+layout: post
+toc: true
 icon: fa fa-book
 order: 5
 ---

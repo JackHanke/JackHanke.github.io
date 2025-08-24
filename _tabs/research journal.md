@@ -1,5 +1,6 @@
 ---
-# layout: tags
+layout: post
+toc: true
 icon: fa fa-paperclip
 order: 2
 math: true
@@ -10,6 +11,7 @@ A collection of machine learning research I have read and want to read. The reso
 ---
 
 ## Fundamentals
+
 *(In the voice of an 60 year old basketball coach)* "...fundamentals."
 
 - ✔️ [Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/) (2015) 
@@ -23,6 +25,7 @@ This is the foundational text in reinforcement learning. It is the best possible
 ---
 
 ## Seminal Architectures
+
 Modern deep learning does have its superstars.
 
 - ✔️ [Auto-Encoding Variational Bayes](https://arxiv.org/pdf/1312.6114) (2013)
@@ -42,6 +45,7 @@ This work popularized denoising diffusion for image generation. Text-based image
 ---
 
 ## Language Modeling
+
 Language modeling is both the most promising subfield of AI, as well as the most industry-relevant.
 
 - ✔️ [A Survey of Large Language Models](https://arxiv.org/abs/2303.18223) (2025)
@@ -67,6 +71,7 @@ This paper introduces ALiBi, a method of position encoding tokens in the attenti
 ---
 
 ## Image Generation
+
 Image generation is just the coolest. Computers can draw!
 
 - [Learning Transferable Visual Models From Natural Language Supervision](https://arxiv.org/abs/2103.00020) (2021) *TO READ*
@@ -84,6 +89,7 @@ Image generation is just the coolest. Computers can draw!
 ---
 
 ## Training Theory and Improvements
+
 I am particularly interested in the empirical laws that govern neural network training. Theory without practice something something.
 
 - ✔️ [The Bitter Lesson](http://www.incompleteideas.net/IncIdeas/BitterLesson.html) (2019)
@@ -127,6 +133,7 @@ This paper introduces the hypothesis that the representations large models arriv
 ---
 
 ## How do I train my model?
+
 The actual training of neural networks requires more than just the gradients. Much of deep learning's success comes from the ability to properly train larger models.
 
 - ✔️ [Understanding the difficulty of training deep feedforward neural networks](https://proceedings.mlr.press/v9/glorot10a/glorot10a.pdf) (2010)
@@ -160,6 +167,7 @@ This paper is a followup to the Batch Normalization paper. Batch normalization, 
 ---
 
 ## Improvements to the Classics
+
 This section contains various improvements to classic architectures.
 
 - [Reflexion: Language Agents with Verbal Reinforcement Learning](https://arxiv.org/abs/2303.11366) (2023) *TO READ*
@@ -173,6 +181,7 @@ This section contains various improvements to classic architectures.
 - [Hierarchical Reasoning Model](https://arxiv.org/pdf/2506.21734) (2025) *TO READ*
 
 ## Specific Models
+
 Some models get all the attention.
 
 - [Deep Residual Learning for Image Recognition](https://arxiv.org/abs/1512.03385) (2015) *TO READ*
@@ -186,6 +195,7 @@ This paper covers Google Deepmind's AlphaGo Zero self-play training pipeline. In
 ---
 
 ## Alternative Architectures
+
 Neural networks are amazing, but there are other architectures out there. Can anything do better?
 
 - ✔️ [Deep Differentiable Logic Gate Networks](https://arxiv.org/abs/2210.08277) (2022)
@@ -202,6 +212,7 @@ This pair of papers introduces networks where instead of learning floating point
 ---
 
 ## Safety & the Future
+
 The future is in our (really just ~500 people that aren't me) hands.
 
 - ✔️ [The Superintelligent Will: Motivation and Instrumental Rationality in Advanced Artificial Agents](https://link.springer.com/article/10.1007/s11023-012-9281-3) (2012)
@@ -215,6 +226,7 @@ This essay introduces a series of fundamental concepts in AI safety, namely inst
 ---
 
 ## Biology and Evolution
+
 Neural networks are loosely (loosely) based on the brain. What about algorithms that are more closely linked with brain function?
 
 - [A Survey on Brain-Inspired Deep Learning via Predictive Coding](https://arxiv.org/pdf/2308.07870) (2025) *TO READ*
@@ -226,6 +238,7 @@ Neural networks are loosely (loosely) based on the brain. What about algorithms 
 ---
 
 ## Interpretability
+
 Wait what is the program I made doing?
 
 - [Stochastic Neighbor Embedding](https://proceedings.neurips.cc/paper_files/paper/2002/file/6150ccc6069bea6b5716254057a194ef-Paper.pdf) (2002) *TO READ*
@@ -235,6 +248,7 @@ Wait what is the program I made doing?
 ---
 
 ## Other resources
+
 Research papers are great, but there are many ways to get information on the concepts and pace of the field. 
 
 - [Epoch AI](https://epoch.ai/blog/trends-in-ai-supercomputers)
