@@ -271,6 +271,8 @@ Wait what is the program I made doing?
 
 Research papers are great, but there are many ways to get information on the concepts and pace of the field. 
 
+- [Working with AI: Measuring the Applicability of Generative AI to Occupations](https://arxiv.org/abs/2507.07935)
+
 - [Epoch AI](https://epoch.ai/blog/trends-in-ai-supercomputers)
 
 *TO WRITE*

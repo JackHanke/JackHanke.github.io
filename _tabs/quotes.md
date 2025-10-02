@@ -41,7 +41,7 @@ This is Nietzsche's most relatable quote. It's amazing what a good night's rest 
 
 ---
 
-<p style="text-align:right;"><i> Lost time is never found again. </i></p>
+<p style="text-align:center;"><i> Lost time is never found again. </i></p>
 
 <p style="text-align:right;"><i> Benjamin Franklin </i></p>
 
