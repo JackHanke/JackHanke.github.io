@@ -64,6 +64,8 @@ This paper studies the phenomena where trained language models often allocate a 
 
 This paper introduces ALiBi, a method of position encoding tokens in the attention mechanism that generalize well to longer sequences than seen in training. When I read this paper I was like oh now I get how these things work. Finally. I think RoPE is what the new OpenAI FOSS models, so maybe this is no longer the best for length extrapolation?
 
+- [RoFormer: Enhanced Transformer with Rotary Position Embedding](https://arxiv.org/abs/2104.09864) (2023) *TO READ*
+
 - [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](https://arxiv.org/abs/2205.14135) (2022) *TO READ*
 
 - [DiffuSeq: Sequence to Sequence Text Generation with Diffusion Models](https://arxiv.org/abs/2210.08933)(2023) *TO READ*
@@ -88,7 +90,29 @@ Image generation is just the coolest. Computers can draw!
 
 ---
 
-## Training Theory and Improvements
+## Reinforcement Learning
+
+RL is just the best.
+
+- ✔️ [Temporal difference learning of N-tuple networks for the game 2048](https://ieeexplore.ieee.org/document/6932907) (2014)
+
+This was an obscure paper I read as part of my 2048 reinforcement learning project. This paper introduced me to RAMNets, which are a nice intermediate between tabluar methods and modern nonlinear function approximators.
+
+- ✔️ [Proximal Policy Optimization Algorithms](https://arxiv.org/abs/1707.06347) (2017)
+
+The final product of policy optimization is so appealing to me. A neural network that encompasses the entire policy is so conceptually simple. And PPO is the current state of the art on making policy networks. I originally tried to make a vanilla policy gradient agent for Flappy Bird, and the updates are so noisy that I decided to read this paper. 
+
+- ✔️ [Simple Policy Optimization](https://arxiv.org/abs/2401.16025?utm_source=chatgpt.com) (2025)
+
+A considerable improvement on PPO, and is simple enough that you can modify existing PPO implementations! Very exciting read.
+
+- ✔️ [Mastering the game of Go without human knowledge](https://www.nature.com/articles/nature24270) (2017)
+
+This paper covers Google Deepmind's AlphaGo Zero self-play training pipeline. Incredibly, they showed that (at least at the time) that pure-RL learns better representations than supervised learning. The news of this result was my original inspiration for learning ML. My friend Dan and I replicated this paper with tictactoe in grad school. 
+
+---
+
+## Training Theory
 
 I am particularly interested in the empirical laws that govern neural network training. Theory without practice something something.
 
@@ -130,9 +154,13 @@ This paper shows that offline RL learning exhibits a performance decrease from o
 
 This paper introduces the hypothesis that the representations large models arrive at are essentially the same, even for models across multiple data domains (text, images, etc). They summarize the hypothesis as "all strong models are alike, each weak model is weak in its own way". As someone who is very interested in learning why scaling works, this was a fascinating read.
 
+- [Deep Residual Learning for Image Recognition](https://arxiv.org/abs/1512.03385) (2015) *TO READ*
+
+- [U-Net: Convolutional Networks for Biomedical Image Segmentation](https://arxiv.org/abs/1505.04597) (2015) *TO READ*
+
 ---
 
-## How do I train my model?
+## Implementation Details
 
 The actual training of neural networks requires more than just the gradients. Much of deep learning's success comes from the ability to properly train larger models.
 
@@ -172,7 +200,9 @@ This section contains various improvements to classic architectures.
 
 - [Reflexion: Language Agents with Verbal Reinforcement Learning](https://arxiv.org/abs/2303.11366) (2023) *TO READ*
 
-- [Decision Transformer: Reinforcement Learning via Sequence Modeling](https://arxiv.org/abs/2106.01345) (2021) *TO READ*
+- ✔️ [Decision Transformer: Reinforcement Learning via Sequence Modeling](https://arxiv.org/abs/2106.01345) (2021) 
+
+This paper describes modeling the offline reinforcement learning framework as a sequence modeling task, and shows that transformers are good at it too. In fact, they get comparable results to pure RL algorithms. 
 
 - [Multi-Game Decision Transformers](https://arxiv.org/abs/2205.15241) (2022) *TO READ*
 
@@ -180,23 +210,11 @@ This section contains various improvements to classic architectures.
 
 - [Hierarchical Reasoning Model](https://arxiv.org/pdf/2506.21734) (2025) *TO READ*
 
-## Specific Models
-
-Some models get all the attention.
-
-- [Deep Residual Learning for Image Recognition](https://arxiv.org/abs/1512.03385) (2015) *TO READ*
-
-- [U-Net: Convolutional Networks for Biomedical Image Segmentation](https://arxiv.org/abs/1505.04597) (2015) *TO READ*
-
-- ✔️ [Mastering the game of Go without human knowledge](https://www.nature.com/articles/nature24270) (2017)
-
-This paper covers Google Deepmind's AlphaGo Zero self-play training pipeline. Incredibly, they showed that (at least at the time) that pure-RL learns better representations than supervised learning. The news of this result was my original inspiration for learning ML. My friend Dan and I replicated this paper with tictactoe in grad school. 
-
 ---
 
 ## Alternative Architectures
 
-Neural networks are amazing, but there are other architectures out there. Can anything do better?
+Neural networks are amazing, but there are countless other architectures out there. Can anything do better?
 
 - ✔️ [Deep Differentiable Logic Gate Networks](https://arxiv.org/abs/2210.08277) (2022)
 - ✔️ [Convolutional Differentiable Logic Gate Networks](https://arxiv.org/abs/2411.04732) (2024)
@@ -211,7 +229,7 @@ This pair of papers introduces networks where instead of learning floating point
 
 ---
 
-## Safety & the Future
+## AI Safety
 
 The future is in our (really just ~500 people that aren't me) hands.
 
@@ -234,6 +252,8 @@ Neural networks are loosely (loosely) based on the brain. What about algorithms 
 - [Networks of Spiking Neurons: The Third Generation of Neural Network Models](https://www.sciencedirect.com/science/article/pii/S0893608097000117) (1996) *TO READ*
 
 - [Continuous Thought Machines](https://arxiv.org/pdf/2505.05522) (2025) *TO READ*
+
+<!-- - []() (1992) *TO READ* -->
 
 ---
 

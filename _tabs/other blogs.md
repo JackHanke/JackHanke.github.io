@@ -5,6 +5,8 @@ icon: fa fa-book
 order: 5
 ---
 
+This is a list of other blogs I enjoy reading.
+
 ## Educators
 
 ---
@@ -31,7 +33,7 @@ Julian is the kind of smart that freaks me out. He was one of the technical lead
 
 - [Ethan Smith's Blog](https://www.ethansmith2000.com/)
 
-Ethan's blog is another inspiration for my own, especially including a section for artwork. I especially like his "SoftMax Attention is a Fluke" post.
+Ethan's blog is another inspiration for my own, especially including a section for artwork. I especially like his [SoftMax Attention is a Fluke](https://www.ethansmith2000.com/post/softmax-attention-is-a-fluke) post.
 
 ---
 
@@ -44,6 +46,12 @@ Both Neel and Rob Miles are great natural educators, and Neel's blog is great fo
 - [near.blog](https://near.blog/)
 
 I first read [Personality Basins](https://near.blog/personality-basins/), then stayed for the other posts.
+
+---
+
+- [Andy Jones' Blog](https://andyljones.com/posts/rl-debugging.html)
+
+I was introduced to Andy's blog through his Debugging RL article, and stayed for the rest.
 
 ---
 

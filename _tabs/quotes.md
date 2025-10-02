@@ -5,7 +5,7 @@ order: 4
 math: true
 ---
 
-I collect quotes that I like. Here are some!
+I collect quotes. Here are some of my faves!
 
 ---
 
@@ -38,6 +38,14 @@ I hate motivational quotes; they are too often unbearably corny. For some reason
 <p style="text-align:right;"><i> Friedrich Nietzsche </i></p>
 
 This is Nietzsche's most relatable quote. It's amazing what a good night's rest can do.
+
+---
+
+<p style="text-align:right;"><i> Lost time is never found again. </i></p>
+
+<p style="text-align:right;"><i> Benjamin Franklin </i></p>
+
+This is another one to get me off the couch.
 
 ---
 
@@ -85,4 +93,13 @@ Sometimes I wonder if I myself ever have questions and ideas that belong to this
 
 <p style="text-align:right;"><i> Donald Knuth </i></p>
 
-I heard this quote after reading the book $A=B$ by Marko Petkovsek, Herbert Wilf and Doron Zeilberger. I am still amazed that something like simplifying finite sums has an algorithm. What a time to be alive! 
+I heard this quote after reading the book $A=B$ by Marko Petkovsek, Herbert Wilf and Doron Zeilberger. I am still amazed that something like simplifying finite sums has an algorithm.
+
+---
+
+<p style="text-align:center;"><i> "I must study Politicks and War that my sons may have liberty to study Mathematicks and Philosophy. My sons ought to study Mathematicks and Philosophy, Geography, natural History, Naval Architecture, navigation, Commerce and Agriculture, in order to give their Children a right to study Painting, Poetry, Musick, Architecture, Statuary, Tapestry and Porcelaine." </i></p>
+
+<p style="text-align:right;"><i> John Adams </i></p>
+
+I love this one.
+
