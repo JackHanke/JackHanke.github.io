@@ -158,6 +158,8 @@ This paper introduces the hypothesis that the representations large models arriv
 
 - [U-Net: Convolutional Networks for Biomedical Image Segmentation](https://arxiv.org/abs/1505.04597) (2015) *TO READ*
 
+- [In-context Learning and Induction Heads](https://arxiv.org/abs/2209.11895) (2022) *TO READ*
+
 ---
 
 ## Implementation Details
@@ -209,6 +211,10 @@ This paper describes modeling the offline reinforcement learning framework as a 
 - [Scaling Laws For Diffusion Transformers](https://arxiv.org/pdf/2410.08184) (2024) *TO READ*
 
 - [Hierarchical Reasoning Model](https://arxiv.org/pdf/2506.21734) (2025) *TO READ*
+
+- [Physics-constrained 3D Convolutional Neural Networks for Electrodynamics](https://arxiv.org/abs/2301.13715) (2023) *TO READ*
+
+- [Physics-constrained machine learning for electrodynamics without gauge ambiguity based on Fourier transformed Maxwell’s equations](https://www.nature.com/articles/s41598-024-65650-9#Sec5) (2024) *TO READ*
 
 ---
 
@@ -273,9 +279,7 @@ Research papers are great, but there are many ways to get information on the con
 
 - [Working with AI: Measuring the Applicability of Generative AI to Occupations](https://arxiv.org/abs/2507.07935)
 
-- [Epoch AI](https://epoch.ai/blog/trends-in-ai-supercomputers)
-
-*TO WRITE*
+- [Trends in AI Supercomputers by Epoch AI](https://epoch.ai/blog/trends-in-ai-supercomputers) *TO READ*
 
 - ✔️ [Transformer Math 101](https://blog.eleuther.ai/transformer-math/)
 
@@ -285,7 +289,7 @@ This blog post is great for planning your next decoder-only transformer!
 
 This blog post is great for getting a quick understanding of algorithms like PO and PPO.
 
-- [On the Biology of a Large Language Model](https://transformer-circuits.pub/2025/attribution-graphs/biology.html)
+- [On the Biology of a Large Language Model](https://transformer-circuits.pub/2025/attribution-graphs/biology.html) *TO READ*
 
-*TO READ*
+- [Why language models hallucinate](https://openai.com/index/why-language-models-hallucinate/) (2025) *TO READ*
 
