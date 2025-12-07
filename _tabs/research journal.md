@@ -160,6 +160,10 @@ This paper introduces the hypothesis that the representations large models arriv
 
 - [In-context Learning and Induction Heads](https://arxiv.org/abs/2209.11895) (2022) *TO READ*
 
+- [Continual Backprop: Stochastic Gradient Descent with Persistent Randomness](https://arxiv.org/abs/2108.06325) (2021) *TO READ*
+
+- [Nested Learning: The Illusion of Deep Learning Architectures](https://abehrouz.github.io/files/NL.pdf) (2025) *TO READ*
+
 ---
 
 ## Implementation Details
@@ -206,6 +210,10 @@ This section contains various improvements to classic architectures.
 
 This paper describes modeling the offline reinforcement learning framework as a sequence modeling task, and shows that transformers are good at it too. In fact, they get comparable results to pure RL algorithms. 
 
+- [An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale](https://arxiv.org/abs/2010.11929) (2020) *TO READ*
+
+- [On the Relationship between Self-Attention and Convolutional Layers](https://arxiv.org/abs/1911.03584) (2019) *TO READ*
+
 - [Multi-Game Decision Transformers](https://arxiv.org/abs/2205.15241) (2022) *TO READ*
 
 - [Scaling Laws For Diffusion Transformers](https://arxiv.org/pdf/2410.08184) (2024) *TO READ*
@@ -232,6 +240,8 @@ This pair of papers introduces networks where instead of learning floating point
 - [The Forward-Forward Algorithm: Some Preliminary Investigations](https://arxiv.org/abs/2212.13345) (2022) *TO READ*
 
 - [Liquid Time-constant Networks](https://arxiv.org/pdf/2006.04439) (2020) *TO READ*
+
+- [Less is More: Recursive Reasoning with Tiny Networks](https://arxiv.org/abs/2510.04871) (2025) *TO READ*
 
 ---
 
