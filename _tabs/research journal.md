@@ -72,6 +72,14 @@ This paper introduces ALiBi, a method of position encoding tokens in the attenti
 
 ---
 
+## Vision
+
+- [An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale](https://arxiv.org/abs/2010.11929) (2020) *TO READ*
+
+- [Rethinking and Improving Relative Position Encoding for Vision Transformer](https://arxiv.org/abs/2107.14222) (2021) *TO READ*
+
+- [DeepNet: Scaling Transformers to 1,000 Layers](https://arxiv.org/abs/2203.00555) (2022) *TO READ*
+
 ## Image Generation
 
 Image generation is just the coolest. Computers can draw!
@@ -303,3 +311,4 @@ This blog post is great for getting a quick understanding of algorithms like PO 
 
 - [Why language models hallucinate](https://openai.com/index/why-language-models-hallucinate/) (2025) *TO READ*
 
+- [Leela Chess Zero Blog](https://lczero.org/blog/page/2/)

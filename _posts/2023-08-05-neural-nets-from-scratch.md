@@ -48,39 +48,39 @@ for activation functions $\sigma^{\ell}$, weights $w^{\ell}$ and biases $b^{\ell
 <div align=center>
     <script type="text/tikz">
     % setup
-    \newcommand{\lablnode}[3]{\node[shape=circle,draw=white,fill=white, inner sep=0pt,minimum size=2pt] (A) at ( #1 , #2 ) {#3};}
+    \newcommand{\lablnode}[3]{\node[shape=circle,draw=none,fill=none, inner sep=0pt,minimum size=2pt, text=red] (A) at ( #1 , #2 ) {#3};}
     % actual image
     \begin{tikzpicture}
         % Define the nodes (neurons)
-        \node (I1) [circle, draw, minimum size=0.6cm] {};
-        \node (I2) [circle, draw, below of=I1, minimum size=0.6cm] {};
-        \node (I3) [circle, draw, below of=I2, minimum size=0.6cm] {};
+        \node (I1) [circle, draw, minimum size=0.6cm, color=gray] {};
+        \node (I2) [circle, draw, below of=I1, minimum size=0.6cm, color=gray] {};
+        \node (I3) [circle, draw, below of=I2, minimum size=0.6cm, color=gray] {};
 
-        \node (H1) [circle, draw, right of=I1, xshift=2cm, yshift=0.5cm, minimum size=0.6cm] {};
-        \node (H2) [circle, draw, below of=H1, minimum size=0.6cm] {};
-        \node (H3) [circle, draw, below of=H2, minimum size=0.6cm] {};
-        \node (H4) [circle, draw, below of=H3, minimum size=0.6cm] {};
+        \node (H1) [circle, draw, right of=I1, xshift=2cm, yshift=0.5cm, minimum size=0.6cm, color=gray] {};
+        \node (H2) [circle, draw, below of=H1, minimum size=0.6cm, color=gray] {};
+        \node (H3) [circle, draw, below of=H2, minimum size=0.6cm, color=gray] {};
+        \node (H4) [circle, draw, below of=H3, minimum size=0.6cm, color=gray] {};
 
-        \node (O1) [circle, draw, right of=H1, xshift=2cm, yshift=-1cm, minimum size=0.6cm] {};
-        \node (O2) [circle, draw, below of=O1, minimum size=0.6cm] {};
+        \node (O1) [circle, draw, right of=H1, xshift=2cm, yshift=-1cm, minimum size=0.6cm, color=gray] {};
+        \node (O2) [circle, draw, below of=O1, minimum size=0.6cm, color=gray] {};
 
         % Connect the layers
         \foreach \i in {1,2,3} {
             \foreach \j in {1,2,3,4} {
-                \draw[->] (I\i) -- (H\j);
+                \draw[->, color=gray] (I\i) -- (H\j);
             }
         }
 
         \foreach \i in {1,2,3,4} {
             \foreach \j in {1,2} {
-                \draw[->] (H\i) -- (O\j);
+                \draw[->, color=gray] (H\i) -- (O\j);
             }
         }
 
         \draw[->, color=red] (H4) -- (O2);
 
         % weight label
-        \( \lablnode{4.5}{-2.5}{$w^{3}_{2 , 4}$} \)
+        \( \lablnode{4.5}{-2.5}{$w^{3}_{24}$} \)
     \end{tikzpicture}
     </script>
 </div>
@@ -137,14 +137,10 @@ def _backward(self, activation, label, N=None, epsilon=None):
     return cost, delta
 ```
 
-Below is an interactive demo for MNIST using a network written and trained entirely from scratch. 
-
-**TODO** demo, [credit](https://www.nathom.dev/blog/mnist/)
-
-This level of understanding not only grounded my understanding of the topic, but it also further motivated my study of deep learning.
+This level of understanding not only grounded my understanding of the topic, but it also further motivated my study of deep learning. I would highly recommend such a project for anyone interested in the field of AI.
 
 Thanks for reading!
 
 ## Sources
 
-**TODO**
+- [Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/)

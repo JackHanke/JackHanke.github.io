@@ -35,7 +35,7 @@ I was limited by the architecture of $\epsilon_\theta$, as I couldn't use convol
 
 I chose to train on the [EMNIST](https://www.nist.gov/itl/products-and-services/emnist-dataset) dataset so that I could generate sentences. I initially tried to train the denoiser using the vanilla feed-forward neural network class I had written before on the raw pixels, as described in the paper. This proved to be unfeasible, as the network struggled to learn anything meaningful. This was really disappointing, but the poor results did show me how important residual connections and convolution layers are to learning for denoising spatial data.
 
-At the time, however, I decided that my best option was to encode all datapoints using my previously-implemented VAE. This reduced the data dimensionality and organized data space better. This is a trick lifted from modern image generators like Stable Diffusion. This means that I technically implemented a LDDPM as opposed to a vanilla DDPM model. This fix allowed for much better conditional image generation to be learned just on my CPU. 
+At the time, however, I decided that my best option was to encode all datapoints using my previously-implemented VAE. This reduced the data dimensionality and organized data space better. This is a trick lifted from modern image generators like Stable Diffusion. This means that I technically implemented a LDDPM as opposed to a vanilla DDPM model. Regardless, this fix allowed for much better conditional image generation to be learned just on my CPU. 
 
 ## Making sentences with my letters
 
@@ -50,3 +50,4 @@ Thanks for reading!
 ## Sources
 
 - [Denoising Diffusion Probabilistic Models](https://arxiv.org/abs/2006.11239)
+- [Understanding Diffusion Models: A Unified Perspective](https://arxiv.org/abs/2208.11970)
