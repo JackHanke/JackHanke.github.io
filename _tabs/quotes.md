@@ -17,6 +17,14 @@ This was my high school yearbook quote. I try to live by these words.
 
 ---
 
+<p style="text-align:center;"><i> "It is the mark of an educated mind to be able to entertain a thought without accepting it."</i></p>
+
+<p style="text-align:right;"><i> Lowell Bennion (misquoting Aristotle), Religion and the Pursuit of Truth </i></p>
+
+A great guide to learning in the modern era.
+
+---
+
 <p style="text-align:center;"><i> "Man is the only animal that refuses to be what he is."</i></p>
 
 <p style="text-align:right;"><i> Albert Camus, Carnets </i></p>

@@ -68,8 +68,6 @@ This paper introduces ALiBi, a method of position encoding tokens in the attenti
 
 - [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](https://arxiv.org/abs/2205.14135) (2022) *TO READ*
 
-- [DiffuSeq: Sequence to Sequence Text Generation with Diffusion Models](https://arxiv.org/abs/2210.08933)(2023) *TO READ*
-
 ---
 
 ## Vision
@@ -118,6 +116,8 @@ A considerable improvement on PPO, and is simple enough that you can modify exis
 
 This paper covers Google Deepmind's AlphaGo Zero self-play training pipeline. Incredibly, they showed that (at least at the time) that pure-RL learns better representations than supervised learning. The news of this result was my original inspiration for learning ML. My friend Dan and I replicated this paper with tictactoe in grad school. 
 
+- [Acquisition of Chess Knowledge in AlphaZero](https://arxiv.org/abs/2111.09259) (2021) *TO READ*
+
 ---
 
 ## Training Theory
@@ -148,8 +148,6 @@ This paper studies how well large language models generalize with increasing sca
 
 This paper discusses the phenomena where significant improvements in test loss can come rapidly, long after training loss has bottomed out. This rapid decrease in test loss is called grokking. The cause of grokking was deeply studied in a [blogpost by Neel Nanda](https://www.alignmentforum.org/posts/N6WM6hs7RQMKDhYjB/a-mechanistic-interpretability-analysis-of-grokking), where he determined the underlying anlgorithm learned by a transformer to do mod $113$ arithmetic. He showed that grokking is affected by how much data is available to train on compared with the total dataset (in this case $113^2$ datapoints), among other results.  Nowadays the word grok is ruined, but it was nice while it lasted.
 
-- [The Era of 1-bit LLMs: All Large Language Models are in 1.58 Bits](https://arxiv.org/abs/2402.17764) (2024) *TO READ*
-
 - ✔️ [Deep Reinforcement Learning with Double Q-learning](https://arxiv.org/pdf/1509.06461) (2015) 
 
 This paper introduces a modification to deep Q-learning towards double Q-learning that improves performance on Atari. The idea is to have a time-lagged version of the online policy predict the value of the action in the update equation, while the online policy is used to select actions. This acts to decouple the choice of estimating Q values and selecting actions (in the style of double Q-learning), but without splitting training among two networks as traditional double Q-learning would imply.
@@ -162,13 +160,11 @@ This paper shows that offline RL learning exhibits a performance decrease from o
 
 This paper introduces the hypothesis that the representations large models arrive at are essentially the same, even for models across multiple data domains (text, images, etc). They summarize the hypothesis as "all strong models are alike, each weak model is weak in its own way". As someone who is very interested in learning why scaling works, this was a fascinating read.
 
-- [Deep Residual Learning for Image Recognition](https://arxiv.org/abs/1512.03385) (2015) *TO READ*
+- [An Empirical Model of Large-Batch Training](https://arxiv.org/abs/1812.06162) (2018) *TO READ*
 
-- [U-Net: Convolutional Networks for Biomedical Image Segmentation](https://arxiv.org/abs/1505.04597) (2015) *TO READ*
+- [Why language models hallucinate](https://arxiv.org/abs/2509.04664) (2025) *TO READ*
 
 - [In-context Learning and Induction Heads](https://arxiv.org/abs/2209.11895) (2022) *TO READ*
-
-- [Continual Backprop: Stochastic Gradient Descent with Persistent Randomness](https://arxiv.org/abs/2108.06325) (2021) *TO READ*
 
 - [Nested Learning: The Illusion of Deep Learning Architectures](https://abehrouz.github.io/files/NL.pdf) (2025) *TO READ*
 
@@ -186,10 +182,6 @@ This paper introduces a better way to initialize weights in a neural network tha
 
 This paper introduces the Adam optimizer, a variant of SGD that computes estimates of the first and second moments of the gradients. From what I know, its been unchallenged for over a decade. I implemented this one myself, and wasn't able to get my VAE to learn anything without it. 
 
-- [Decoupled Weight Decay Regularization](https://arxiv.org/pdf/1711.05101) (2019) *TO READ*
-
-- [Improving neural networks by preventing co-adaptation of feature detectors](https://arxiv.org/pdf/1207.0580) (2012) *TO READ*
-
 - [Dropout: A Simple Way to Prevent Neural Networks from Overfitting](https://www.cs.toronto.edu/~rsalakhu/papers/srivastava14a.pdf) (2014) *TO READ*
 
 - ✔️ [Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift](https://arxiv.org/abs/1502.03167) (2015)
@@ -200,10 +192,6 @@ This paper introduces a technique to remedy a problem in training deep neural ne
 
 This paper is a followup to the Batch Normalization paper. Batch normalization, though effective, does slow down for large batch sizes. Layer normalization instead normalizes each element of each layer activation using the same estimate of the mean and variance over the hidden layers of the network, but has different normalization across the batch. This allows for normalization with a batch size of one.
 
-- [Overcoming catastrophic forgetting in neural networks](https://arxiv.org/pdf/1612.00796) (2017) *TO READ*
-
-- [Prefix-Tuning: Optimizing Continuous Prompts for Generation](https://arxiv.org/abs/2101.00190) (2021) *TO READ*
-
 - [LoRA: Low-Rank Adaptation of Large Language Models](https://arxiv.org/abs/2106.09685) (2021) *TO READ*
 
 ---
@@ -212,25 +200,17 @@ This paper is a followup to the Batch Normalization paper. Batch normalization, 
 
 This section contains various improvements to classic architectures.
 
-- [Reflexion: Language Agents with Verbal Reinforcement Learning](https://arxiv.org/abs/2303.11366) (2023) *TO READ*
-
 - ✔️ [Decision Transformer: Reinforcement Learning via Sequence Modeling](https://arxiv.org/abs/2106.01345) (2021) 
 
 This paper describes modeling the offline reinforcement learning framework as a sequence modeling task, and shows that transformers are good at it too. In fact, they get comparable results to pure RL algorithms. 
-
-- [An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale](https://arxiv.org/abs/2010.11929) (2020) *TO READ*
 
 - [On the Relationship between Self-Attention and Convolutional Layers](https://arxiv.org/abs/1911.03584) (2019) *TO READ*
 
 - [Multi-Game Decision Transformers](https://arxiv.org/abs/2205.15241) (2022) *TO READ*
 
-- [Scaling Laws For Diffusion Transformers](https://arxiv.org/pdf/2410.08184) (2024) *TO READ*
-
 - [Hierarchical Reasoning Model](https://arxiv.org/pdf/2506.21734) (2025) *TO READ*
 
-- [Physics-constrained 3D Convolutional Neural Networks for Electrodynamics](https://arxiv.org/abs/2301.13715) (2023) *TO READ*
-
-- [Physics-constrained machine learning for electrodynamics without gauge ambiguity based on Fourier transformed Maxwell’s equations](https://www.nature.com/articles/s41598-024-65650-9#Sec5) (2024) *TO READ*
+- [Less is More: Recursive Reasoning with Tiny Networks](https://arxiv.org/abs/2510.04871) (2025) *TO READ*
 
 ---
 
@@ -244,12 +224,6 @@ Neural networks are amazing, but there are countless other architectures out the
 This pair of papers introduces networks where instead of learning floating point parameters, they learn the choice of a specific logic gate. Training these networks is slower, but the inference speed is insanely fast. Even better, one can print a tiny ASIC with the learned network to get inference blazingly fast.
 
 - [Deep Stochastic Logic Gate Networks](https://ieeexplore.ieee.org/abstract/document/10301592) (2024) *TO READ*
-
-- [The Forward-Forward Algorithm: Some Preliminary Investigations](https://arxiv.org/abs/2212.13345) (2022) *TO READ*
-
-- [Liquid Time-constant Networks](https://arxiv.org/pdf/2006.04439) (2020) *TO READ*
-
-- [Less is More: Recursive Reasoning with Tiny Networks](https://arxiv.org/abs/2510.04871) (2025) *TO READ*
 
 ---
 
@@ -289,15 +263,13 @@ Wait what is the program I made doing?
 
 - [A Survey on Sparse Autoencoders: Interpreting the Internal Mechanisms of Large Language Models](https://arxiv.org/abs/2503.05613) (2025) *TO READ*
 
+- [On the Biology of a Large Language Model](https://transformer-circuits.pub/2025/attribution-graphs/biology.html) *TO READ*
+
 ---
 
 ## Other resources
 
 Research papers are great, but there are many ways to get information on the concepts and pace of the field. 
-
-- [Working with AI: Measuring the Applicability of Generative AI to Occupations](https://arxiv.org/abs/2507.07935)
-
-- [Trends in AI Supercomputers by Epoch AI](https://epoch.ai/blog/trends-in-ai-supercomputers) *TO READ*
 
 - ✔️ [Transformer Math 101](https://blog.eleuther.ai/transformer-math/)
 
@@ -307,8 +279,10 @@ This blog post is great for planning your next decoder-only transformer!
 
 This blog post is great for getting a quick understanding of algorithms like PO and PPO.
 
-- [On the Biology of a Large Language Model](https://transformer-circuits.pub/2025/attribution-graphs/biology.html) *TO READ*
+- [Working with AI: Measuring the Applicability of Generative AI to Occupations](https://arxiv.org/abs/2507.07935)
 
-- [Why language models hallucinate](https://openai.com/index/why-language-models-hallucinate/) (2025) *TO READ*
+- [Trends in AI Supercomputers by Epoch AI](https://epoch.ai/blog/trends-in-ai-supercomputers) *TO READ*
 
 - [Leela Chess Zero Blog](https://lczero.org/blog/page/2/)
+
+- [Even Superhuman Go AIs Have Surprising Failure Modes](https://www.alignmentforum.org/posts/DCL3MmMiPsuMxP45a/even-superhuman-go-ais-have-surprising-failure-modes) (2023) *TO READ*

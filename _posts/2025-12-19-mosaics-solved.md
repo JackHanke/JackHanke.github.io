@@ -166,7 +166,7 @@ I would later learn that these loops are called *self-avoiding polygons*, but I 
 
 About a year after I published the video, I received a comment claiming to have a method for computing $t_{n,m}$ for small fixed $m$. The comment came from a user called Farstar31, who suggested a new method that we were able to generalize into a final solution. 
 
-After some discussions over twitter and email, we worked out a method to compute $6^{nm} - t_{n,m}$ for any $n$ and $m$! Later work refined and improved the solution to the following result.
+After some discussions over twitter and email, we worked out a method to compute $6^{nm} - \|S^{(m,n)}\|$ for any $n$ and $m$! Later work refined and improved the solution to the following result.
 
 **Definition.** For integers $k \geq 1$ let $A_k, B_k, C_k, D_k$ be $2^{k-1} \times 2^{k-1}$ matrices with integer entries, where $A_{1}=\begin{pmatrix}6\end{pmatrix}, B_{1}=\begin{pmatrix}-1\end{pmatrix}, C_{1}=\begin{pmatrix}1\end{pmatrix}, D_{1}=\begin{pmatrix}1\end{pmatrix}$, and
 
@@ -180,5 +180,23 @@ $$
 **Theorem.** The number of $(m,n)$ mosaics that do not contain a polygon $\|S^{(m,n)}\|$ is the $(0,0)$ entry of $A_{n}^m$.
 
 **Proof.** The proof is lengthy, so the full writeup can be found [here](https://github.com/JackHanke/mosaics/blob/main/writeup/mosaics.pdf).
+
+If you are in desperate need of larger values for this question, here is a table up to $n,m \leq  6$:
+
+| $\|S^{(m,n)}\|$ | 2 | 3 | 4 | 5 | 6 |
+| -:|-:|-:|-:|-:|-:|
+| 2 | 1 | 73 | 3,960 | 190,475 | 8,580,671 |
+| 3 |  | 31,998 | 10,414,981 | 3,005,175,624 | 812,051,193,421 |
+| 4 |  |  | 20,334,816,290 | 35,193,424,502,954 | 57,038,790,790,258,922 |
+| 5 |  |  |  | 365,320,963,733,070,822 | 3,551,140,805,014,640,314,548 |
+| 6 |  |  |  |  | 207,033,904,357,764,188,604,003,507 |
+
+For our above example, we have $\|S^{(5,7)}\| = 33,119,798,046,247,294,513,136,340$.
+
+## Further Questions
+
+1. What is the smallest such $n$ such that $1 - 6^{-n^2}\|S^{(n,n)}\| \geq \frac{1}{2}$? Empirical evidence suggests it is around $n=30$, but both enumeration methods detailed in the proof don't scale to this size.
+
+2. What is the value of $\alpha = 6^{-1} \lim_{n \to \infty} \|S^{(n,n)}\|^{\frac{1}{n^2}}$?
 
 Thank you for reading!
