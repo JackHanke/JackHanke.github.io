@@ -101,7 +101,7 @@ Sometimes I wonder if I myself ever have questions and ideas that belong to this
 
 <p style="text-align:right;"><i> Donald Knuth </i></p>
 
-I heard this quote after reading the book $A=B$ by Marko Petkovsek, Herbert Wilf and Doron Zeilberger. I am still amazed that something like simplifying finite sums has an algorithm.
+I heard this quote in the foreword of the book $A=B$ by Marko Petkovsek, Herbert Wilf and Doron Zeilberger. I am still amazed that something like simplifying finite sums has an algorithm.
 
 ---
 
@@ -110,4 +110,16 @@ I heard this quote after reading the book $A=B$ by Marko Petkovsek, Herbert Wilf
 <p style="text-align:right;"><i> John Adams </i></p>
 
 I love this one.
+
+<p style="text-align:center;"><i> "Never attribute to malice that which is adequately explained by stupidity." </i></p>
+
+<p style="text-align:right;"><i> Robert J. Hanlon </i></p>
+
+Maybe a quote brought up too often, but I do like the positivity of it.
+
+<p style="text-align:center;"><i> "When a person can't find a deep sense of meaning, they distract themselves with pleasure." </i></p>
+
+<p style="text-align:right;"><i> Viktor E. Frankl </i></p>
+
+Find your meaning!
 

@@ -195,7 +195,7 @@ For our above example, we have $\|S^{(5,7)}\| = 33,119,798,046,247,294,513,136,3
 
 ## Further Questions
 
-1. What is the smallest such $n$ such that $1 - 6^{-n^2}\|S^{(n,n)}\| \geq \frac{1}{2}$? Empirical evidence suggests it is around $n=30$, but both enumeration methods detailed in the proof don't scale to this size.
+1. What is the smallest such $n$ such that $1 - 6^{-n^2}\|S^{(n,n)}\| \geq \frac{1}{2}$? Empirical evidence suggests $n \approx 30$, but both enumeration methods detailed in the proof don't scale to this size.
 
 2. What is the value of $\alpha = 6^{-1} \lim_{n \to \infty} \|S^{(n,n)}\|^{\frac{1}{n^2}}$?
 

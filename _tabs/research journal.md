@@ -40,8 +40,6 @@ This work introduces the Transformer, easily one of the most influential papers 
 
 This work popularized denoising diffusion for image generation. Text-based image generation is one of the the reasons I study deep learning. The fact that computers can draw now is amazing to me. After reading this paper, I was able to make a latent diffusion model from scratch, using my previously made neural network and VAE. I had to train it on CPU-only, which was so slow even for MNIST. 
 
-- [Mamba: Linear-Time Sequence Modeling with Selective State Spaces](https://arxiv.org/abs/2312.00752) (2023) *TO READ*
-
 ---
 
 ## Language Modeling
@@ -64,9 +62,9 @@ This paper studies the phenomena where trained language models often allocate a 
 
 This paper introduces ALiBi, a method of position encoding tokens in the attention mechanism that generalize well to longer sequences than seen in training. When I read this paper I was like oh now I get how these things work. Finally. I think RoPE is what the new OpenAI FOSS models, so maybe this is no longer the best for length extrapolation?
 
-- [RoFormer: Enhanced Transformer with Rotary Position Embedding](https://arxiv.org/abs/2104.09864) (2023) *TO READ*
+- ✔️ [RoFormer: Enhanced Transformer with Rotary Position Embedding](https://arxiv.org/abs/2104.09864) (2023)
 
-- [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](https://arxiv.org/abs/2205.14135) (2022) *TO READ*
+Position encodings confuse me. I know this is the modern solution for encoding position in transformers, so I started here. Honestly, I just need to reread this.
 
 ---
 
@@ -160,6 +158,10 @@ This paper shows that offline RL learning exhibits a performance decrease from o
 
 This paper introduces the hypothesis that the representations large models arrive at are essentially the same, even for models across multiple data domains (text, images, etc). They summarize the hypothesis as "all strong models are alike, each weak model is weak in its own way". As someone who is very interested in learning why scaling works, this was a fascinating read.
 
+- ✔️ [The Universal Weight Subspace Hypothesis](https://arxiv.org/abs/2512.05117) (2025)
+
+This is a crazy paper, very similar to *The Platonic Representation Hypothesis* paper above. If 
+
 - [An Empirical Model of Large-Batch Training](https://arxiv.org/abs/1812.06162) (2018) *TO READ*
 
 - [Why language models hallucinate](https://arxiv.org/abs/2509.04664) (2025) *TO READ*
@@ -182,15 +184,19 @@ This paper introduces a better way to initialize weights in a neural network tha
 
 This paper introduces the Adam optimizer, a variant of SGD that computes estimates of the first and second moments of the gradients. From what I know, its been unchallenged for over a decade. I implemented this one myself, and wasn't able to get my VAE to learn anything without it. 
 
-- [Dropout: A Simple Way to Prevent Neural Networks from Overfitting](https://www.cs.toronto.edu/~rsalakhu/papers/srivastava14a.pdf) (2014) *TO READ*
-
 - ✔️ [Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift](https://arxiv.org/abs/1502.03167) (2015)
 
 This paper introduces a technique to remedy a problem in training deep neural networks called internal covariance shift, which is the distribution of each layer's input changes during training. This technique, called batch normalization, normalizes each element of each layer activation using estimates of the mean and variances computed over the minibatch. It then adds two learnable parameters to linearly scale each normalized activation. This is another favorite paper of mine. I love how dramatic the improvement is for how simple the solution is. A paper that makes you go: why didn't I think of that?
 
-- ✔️ [Layer Normalization](https://arxiv.org/pdf/1607.06450)
+- ✔️ [Layer Normalization](https://arxiv.org/pdf/1607.06450) (2016)
 
 This paper is a followup to the Batch Normalization paper. Batch normalization, though effective, does slow down for large batch sizes. Layer normalization instead normalizes each element of each layer activation using the same estimate of the mean and variance over the hidden layers of the network, but has different normalization across the batch. This allows for normalization with a batch size of one.
+
+- ✔️ [Root Mean Square Layer Normalization](https://arxiv.org/abs/1910.07467) (2019)
+
+The third (and final?) well-known layer-wise normalization trick, and the one that is currently in use for most open source LLMs, replacing the original Layer Norm suggestions from *Attention is All you Need*.
+
+- [Dropout: A Simple Way to Prevent Neural Networks from Overfitting](https://www.cs.toronto.edu/~rsalakhu/papers/srivastava14a.pdf) (2014) *TO READ*
 
 - [LoRA: Low-Rank Adaptation of Large Language Models](https://arxiv.org/abs/2106.09685) (2021) *TO READ*
 
@@ -204,6 +210,10 @@ This section contains various improvements to classic architectures.
 
 This paper describes modeling the offline reinforcement learning framework as a sequence modeling task, and shows that transformers are good at it too. In fact, they get comparable results to pure RL algorithms. 
 
+- ✔️ [mHC: Manifold-Constrained Hyper-Connections](https://arxiv.org/abs/2512.24880) (2026) 
+
+I had no idea researchers were considering changing the residual connection, I thought that was sacred! I guess that's what makes a researcher. This paper was very interesting, though likely only useful for cutting edge labs. To be clear, I will be stealing their hyperparams for my own language model soon enough.
+
 - [On the Relationship between Self-Attention and Convolutional Layers](https://arxiv.org/abs/1911.03584) (2019) *TO READ*
 
 - [Multi-Game Decision Transformers](https://arxiv.org/abs/2205.15241) (2022) *TO READ*
@@ -211,6 +221,16 @@ This paper describes modeling the offline reinforcement learning framework as a 
 - [Hierarchical Reasoning Model](https://arxiv.org/pdf/2506.21734) (2025) *TO READ*
 
 - [Less is More: Recursive Reasoning with Tiny Networks](https://arxiv.org/abs/2510.04871) (2025) *TO READ*
+
+---
+
+## Specific Models
+
+- ✔️ [Gemma: Open Models Based on Gemini Research and Technology](https://arxiv.org/abs/2403.08295)
+- ✔️ [Gemma 2: Improving Open Language Models at a Practical Size](https://arxiv.org/abs/2408.00118)
+- ✔️ [Gemma 3 Technical Report](https://arxiv.org/abs/2503.19786)
+
+The Gemma series of models are a great place to learn about current architectures and practices.
 
 ---
 
@@ -245,13 +265,13 @@ This essay introduces a series of fundamental concepts in AI safety, namely inst
 
 Neural networks are loosely (loosely) based on the brain. What about algorithms that are more closely linked with brain function?
 
+- ✔️ [A Brain-like Synergistic Core in LLMs Drives Behaviour and Learning](https://arxiv.org/abs/2601.06851) (2026)
+
+An information-theoretic approach to understanding which components of an LLM are active for high-level general reasoning, like in math. It finds that the most synergistic components of an LLM (among attention heads) are in the middle of the network, where the beginning and ends do the housekeeping of basic feature recognition and de/tokenization.
+
 - [A Survey on Brain-Inspired Deep Learning via Predictive Coding](https://arxiv.org/pdf/2308.07870) (2025) *TO READ*
 
-- [Networks of Spiking Neurons: The Third Generation of Neural Network Models](https://www.sciencedirect.com/science/article/pii/S0893608097000117) (1996) *TO READ*
-
 - [Continuous Thought Machines](https://arxiv.org/pdf/2505.05522) (2025) *TO READ*
-
-<!-- - []() (1992) *TO READ* -->
 
 ---
 
@@ -279,10 +299,12 @@ This blog post is great for planning your next decoder-only transformer!
 
 This blog post is great for getting a quick understanding of algorithms like PO and PPO.
 
-- [Working with AI: Measuring the Applicability of Generative AI to Occupations](https://arxiv.org/abs/2507.07935)
+- [Epoch AI](https://epoch.ai/), especially their graph work like [this post](https://epoch.ai/data-insights/compute-trend-post-2010)
 
-- [Trends in AI Supercomputers by Epoch AI](https://epoch.ai/blog/trends-in-ai-supercomputers) *TO READ*
+- [Working with AI: Measuring the Applicability of Generative AI to Occupations](https://arxiv.org/abs/2507.07935)
 
 - [Leela Chess Zero Blog](https://lczero.org/blog/page/2/)
 
 - [Even Superhuman Go AIs Have Surprising Failure Modes](https://www.alignmentforum.org/posts/DCL3MmMiPsuMxP45a/even-superhuman-go-ais-have-surprising-failure-modes) (2023) *TO READ*
+
+

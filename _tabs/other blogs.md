@@ -19,6 +19,10 @@ I had the pleasure of watching [David MacKay's Information Theory Lectures](http
 
 ---
 
+- Lilian Weng's [Lil' Log](https://lilianweng.github.io/)
+
+Extremely insightful, well researched, and thorough. An excellent place to read about new topics in the subject.
+
 - Alex Irpan's [Sorta Insightful](https://www.alexirpan.com/)
 
 The blog I have modeled my own after, and not just the styling. I was originally brought to Alex's blog because of his famous [Deep Reinforcement Learning Doesn't Work Yet](https://www.alexirpan.com/2018/02/14/rl-hard.html) post, and stayed for his experience and wit.
