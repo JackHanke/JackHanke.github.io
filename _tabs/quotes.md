@@ -111,15 +111,31 @@ I heard this quote in the foreword of the book $A=B$ by Marko Petkovsek, Herbert
 
 I love this one.
 
+---
+
 <p style="text-align:center;"><i> "Never attribute to malice that which is adequately explained by stupidity." </i></p>
 
 <p style="text-align:right;"><i> Robert J. Hanlon </i></p>
 
 Maybe a quote brought up too often, but I do like the positivity of it.
 
+---
+
 <p style="text-align:center;"><i> "When a person can't find a deep sense of meaning, they distract themselves with pleasure." </i></p>
 
 <p style="text-align:right;"><i> Viktor E. Frankl </i></p>
 
-Find your meaning!
+I'm still working on finding mine.
+
+---
+
+# Malaphors
+
+Another thing I like to collect are [malaphors](https://en.wiktionary.org/wiki/malaphor)! My favorites are:
+
+<p style="text-align:center;"><i> "You can lead a gift horse to water, but you can't look him in the mouth." </i></p>
+
+---
+
+<p style="text-align:center;"><i> "We'll burn that bridge when we come to it." </i></p>
 

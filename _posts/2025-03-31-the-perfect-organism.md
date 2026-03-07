@@ -6,7 +6,7 @@ categories: [Blog]
 tags: [Instrumental Convergence]
 math: true
 image:
-  path: assets/img/mothercomputer.jpg
+  path: assets/img/org/mothercomputer.jpg
 ---
 In Ridley Scott's Sci-Fi classic [Alien](https://en.wikipedia.org/wiki/Alien_(film)), the following conversation occurs after the release of the titular creature.
 

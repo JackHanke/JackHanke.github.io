@@ -6,7 +6,7 @@ categories: [Machine Learning]
 tags: [Neural Networks, Attention, Transformers, From Scratch]
 math: true
 image:
-  path: /assets/img/oopsallfromscratch.jpg
+  path: /assets/img/attention/oopsallfromscratch.jpg
 ---
 
 | [GitHub Repo](https://github.com/JackHanke/nets) 👾 | **Scope:** ⭐⭐⭐ |

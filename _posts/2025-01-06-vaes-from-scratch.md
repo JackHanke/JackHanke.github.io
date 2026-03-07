@@ -6,7 +6,7 @@ categories: [Machine Learning]
 tags: [Neural Networks, VAE, From Scratch]
 math: true
 image:
-  path: /assets/img/waititsallfromscratch.png
+  path: /assets/img/vae/waititsallfromscratch.png
 ---
 
 | [GitHub Repo](https://github.com/JackHanke/nets) 👾 | **Scope:** ⭐⭐⭐ |
@@ -110,7 +110,7 @@ To fix this I read through the famous [Adam Optimizer paper](https://arxiv.org/a
 After implementing this I saw a staggering improvement in learning (~10x decrease in the scale of the loss compared to using SGD), showing the clear power of momentum-based optimization. After training, I wanted to produce an animation comparing AEs and VAEs when extrapolating in the latent space. This animation shows the decoded transitions between a latent representation for a `2` and a `7`.
 
 {:refdef: style="text-align: center;"}
-![]({{ site.baseimg }}/assets/img/extrap-anim.gif)
+![]({{ site.baseimg }}/assets/img/vae/extrap-anim.gif)
 {: refdef}
 
 Notice that as the AE only prioritizes reconstruction, the image is much sharper than that of the VAE. However, the VAE's transition between the two is smoother, and more often looks like some type of digit in the transition. We can see the `2` go to a `9` and then to a `7` smoothly.

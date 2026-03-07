@@ -6,7 +6,7 @@ categories: [Math]
 tags: [Mosaics, SOME3, Combinatorics]
 math: true
 image:
-  path: assets/img/mosaics_solved.jpg
+  path: assets/img/mosaics/mosaics_solved.jpg
 ---
 
 | [GitHub Repo](https://github.com/JackHanke/mosaics) 👾 | [YouTube Video](https://www.youtube.com/watch?v=D3dp5RBmPcs) 📺 | **Scope:** ⭐⭐⭐⭐ | 🚧 Under Construction 🚧 |
@@ -17,7 +17,7 @@ This is a followup to [this post]({% post_url 2023-07-23-mosaics %}).
 
 Take the following six tiles
 
-<div align=center>
+<!-- <div align=center>
     <script type="text/tikz">
     % setup
     \newcommand{\cellA}[4]{\draw[red, thick] (#3 * 0.5 + #1 * 0.5 , #2) -- (#3, #4 * 0.5 + #2 * 0.5); \draw[gray, thick] ( #1 , #2 ) rectangle ( #3 , #4 ); }
@@ -36,11 +36,12 @@ Take the following six tiles
         \cellF{10}{0}{11}{1}
     \end{tikzpicture}
     </script>
-</div>
+</div> -->
+![](assets/img/mosaics/1.png)
 
 and create a $n \times m$ rectangular grid using them. Let's call these grids *mosaics*. For example, below is a $(7,5)-$mosaic.
 
-<div align=center>
+<!-- <div align=center>
     <script type="text/tikz">
     % setup
     \newcommand{\cellA}[4]{\draw[red, thick] (#3 * 0.5 + #1 * 0.5 , #2) -- (#3, #4 * 0.5 + #2 * 0.5); \draw[gray, thick] ( #1 , #2 ) rectangle ( #3 , #4 ); }
@@ -93,11 +94,12 @@ and create a $n \times m$ rectangular grid using them. Let's call these grids *m
         \cellE{6}{4}{7}{5}    
     \end{tikzpicture}
     </script>
-</div>
+</div> -->
+![](assets/img/mosaics/2.png)
 
 Clearly there are $6^{nm}$ possible mosaics. The question is for a given $n$ and $m$, how many mosaics contain at least one connected "loop", like below?
 
-<div align=center>
+<!-- <div align=center>
     <script type="text/tikz">
     % setup
     \newcommand{\cellA}[4]{\draw[red, thick] (#3 * 0.5 + #1 * 0.5 , #2) -- (#3, #4 * 0.5 + #2 * 0.5); \draw[gray, thick] ( #1 , #2 ) rectangle ( #3 , #4 ); }
@@ -158,7 +160,8 @@ Clearly there are $6^{nm}$ possible mosaics. The question is for a given $n$ and
         \cellE{6}{4}{7}{5}   
     \end{tikzpicture}
     </script>
-</div>
+</div> -->
+![](assets/img/mosaics/3.png)
 
 I would later learn that these loops are called *self-avoiding polygons*, but I just refer to them as polygons in the paper and this post.
 
@@ -183,7 +186,7 @@ $$
 
 If you are in desperate need of larger values for this question, here is a table up to $n,m \leq  6$:
 
-| $\|S^{(m,n)}\|$ | 2 | 3 | 4 | 5 | 6 |
+| $6^{mn}-\|S^{(m,n)}\|$ | 2 | 3 | 4 | 5 | 6 |
 | -:|-:|-:|-:|-:|-:|
 | 2 | 1 | 73 | 3,960 | 190,475 | 8,580,671 |
 | 3 |  | 31,998 | 10,414,981 | 3,005,175,624 | 812,051,193,421 |

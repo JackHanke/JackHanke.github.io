@@ -6,7 +6,7 @@ categories: [Machine Learning]
 tags: [Neural Networks, Diffusion, From Scratch]
 math: true
 image:
-  path: assets/img/imagegen.gif
+  path: assets/img/diffusion/imagegen.gif
 ---
 
 | [GitHub Repo](https://github.com/JackHanke/nets) 👾 | **Scope:** ⭐⭐⭐ | 🚧 Under Construction 🚧 |
@@ -27,7 +27,7 @@ $$\mathbb{E}\left[-\log(p_\theta(\mathbf{x}_0))\right]$$
 
 **TODO**
 
-During training, the denoising network $\epsilon_\theta$ is then learning a vector field in data space. Then while sampling, we move our random seed in data space to higher density regions in such a way that we don't just converge to the original datapoints, which are the most likely points in data space.
+During training, the denoising network $\epsilon_\theta$ is then learning a vector field in data space. Then when sampling we start with a random initialization in data space. We want to move towards regions of higher $p(x)$, but in such that different initializations don't end up in the same local maximum. 
 
 ## My approach
 
@@ -35,7 +35,7 @@ I was limited by the architecture of $\epsilon_\theta$, as I couldn't use convol
 
 I chose to train on the [EMNIST](https://www.nist.gov/itl/products-and-services/emnist-dataset) dataset so that I could generate sentences. I initially tried to train the denoiser using the vanilla feed-forward neural network class I had written before on the raw pixels, as described in the paper. This proved to be unfeasible, as the network struggled to learn anything meaningful. This was really disappointing, but the poor results did show me how important residual connections and convolution layers are to learning for denoising spatial data.
 
-At the time, however, I decided that my best option was to encode all datapoints using my previously-implemented VAE. This reduced the data dimensionality and organized data space better. This is a trick lifted from modern image generators like Stable Diffusion. This means that I technically implemented a LDDPM as opposed to a vanilla DDPM model. Regardless, this fix allowed for much better conditional image generation to be learned just on my CPU. 
+At the time, however, I decided that my best option was to encode all datapoints using my previously-implemented VAE. This reduced the data dimensionality and organized data space better. This is a trick lifted from modern image generators like Stable Diffusion. This means that I technically implemented a [LDDPM](https://arxiv.org/abs/2112.10752) as opposed to a vanilla DDPM model. Regardless, this fix allowed for much better conditional image generation to be learned just on my CPU. 
 
 ## Making sentences with my letters
 

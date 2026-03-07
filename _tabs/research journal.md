@@ -70,6 +70,8 @@ Position encodings confuse me. I know this is the modern solution for encoding p
 
 ## Vision
 
+Oops all Transformers.
+
 - [An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale](https://arxiv.org/abs/2010.11929) (2020) *TO READ*
 
 - [Rethinking and Improving Relative Position Encoding for Vision Transformer](https://arxiv.org/abs/2107.14222) (2021) *TO READ*
@@ -96,7 +98,7 @@ Image generation is just the coolest. Computers can draw!
 
 ## Reinforcement Learning
 
-RL is just the best.
+*Eventually* it will take over. Eventually.
 
 - ✔️ [Temporal difference learning of N-tuple networks for the game 2048](https://ieeexplore.ieee.org/document/6932907) (2014)
 
@@ -160,7 +162,7 @@ This paper introduces the hypothesis that the representations large models arriv
 
 - ✔️ [The Universal Weight Subspace Hypothesis](https://arxiv.org/abs/2512.05117) (2025)
 
-This is a crazy paper, very similar to *The Platonic Representation Hypothesis* paper above. If 
+This is a crazy paper, very similar to *The Platonic Representation Hypothesis* paper above. If this is correct, we may be able to drop the first L in LLM!
 
 - [An Empirical Model of Large-Batch Training](https://arxiv.org/abs/1812.06162) (2018) *TO READ*
 
@@ -169,6 +171,7 @@ This is a crazy paper, very similar to *The Platonic Representation Hypothesis* 
 - [In-context Learning and Induction Heads](https://arxiv.org/abs/2209.11895) (2022) *TO READ*
 
 - [Nested Learning: The Illusion of Deep Learning Architectures](https://abehrouz.github.io/files/NL.pdf) (2025) *TO READ*
+- [Superposition Yields Robust Neural Scaling](https://arxiv.org/pdf/2505.10465) (2025) *TO READ*
 
 ---
 
@@ -195,6 +198,8 @@ This paper is a followup to the Batch Normalization paper. Batch normalization, 
 - ✔️ [Root Mean Square Layer Normalization](https://arxiv.org/abs/1910.07467) (2019)
 
 The third (and final?) well-known layer-wise normalization trick, and the one that is currently in use for most open source LLMs, replacing the original Layer Norm suggestions from *Attention is All you Need*.
+
+- [Quantization-Aware Distillation for NVFP4 Inference Accuracy Recovery](https://research.nvidia.com/labs/nemotron/files/NVFP4-QAD-Report.pdf) (2026) *TO READ*
 
 - [Dropout: A Simple Way to Prevent Neural Networks from Overfitting](https://www.cs.toronto.edu/~rsalakhu/papers/srivastava14a.pdf) (2014) *TO READ*
 

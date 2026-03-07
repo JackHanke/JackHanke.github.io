@@ -6,16 +6,16 @@ categories: [Math]
 tags: [TETRIS, Polyominos, Thesis, Polyforms]
 math: true
 image:
-  path: assets/img/polyomino.jpg
+  path: assets/img/minimals/polyomino.jpg
 ---
 
-| [GitHub Repo](https://github.com/JackHanke/minimal-inscribed-polyforms) 👾 | [YouTube Video](https://www.youtube.com/watch?v=8N80EbXVUU0) 📺 | **Scope:** ⭐⭐⭐⭐ | 🚧 Under Construction 🚧 |
+| [GitHub Repo](https://github.com/JackHanke/minimal-inscribed-polyforms) 👾 | [YouTube Video](https://www.youtube.com/watch?v=8N80EbXVUU0) 📺 | **Scope:** ⭐⭐⭐⭐ |
 
 ## A Global Pandemic
 
 When I was sent home in the middle of my undergraduate degree, I was faced with a lot of time on my hands. I had done all that I thought I could on the [Mosaic Problem](https://jackhanke.github.io/jekyll/update/2025/01/23/mosaics.html), and so I turned my attention to a similar problem I also enjoyed. Predictably, it takes place on the square lattice. Consider an $n \times m$ grid. How many ways can one shade the cells so that they make a single connected shape, the shape touches all four sides, and that shape contains the least amount of squares that can do so? For example, here is an example shading in a $7 \times 5$ grid.
 
-<div align=center>
+<!-- <div align=center>
     <script type="text/tikz">
     % setup
     \newcommand{\cell}[4]{\filldraw[gray!40] ( #1 , #2 ) rectangle ( #3 , #4 ); \draw[gray, thick] ( #1 , #2 ) rectangle ( #3 , #4 );}
@@ -35,7 +35,9 @@ When I was sent home in the middle of my undergraduate degree, I was faced with 
         \( \cell{6}{2}{7}{3} \)
     \end{tikzpicture}
     </script>
-</div>
+</div> -->
+
+![](assets/img/minimals/1.png)
 
 Let's call the number of these shapes $s_{n,m}$. At the time, I called these shapes $4$*-paths*, as the shapes typically had four spokes that were joined by a single path. I began by collecting some empirical data by counting all the $4$-paths in a small grid. At this point I didn't know how to code that well, and I worked out examples on grid paper. I remember a lot of double and triple checking to make sure my diagrams didn't miss or double count any cases. 
 
@@ -43,7 +45,7 @@ After some painstaking and boring work, I enumerated a series of cases that I wi
 
 That night I had one of the realizations that most mathematicians live for, that simplification that opens the whole problem up. I realized that these shapes can nicely be split into three classes, shown below.
 
-<div align=center>
+<!-- <div align=center>
     <script type="text/tikz">
     % setup
     \newcommand{\cell}[4]{\filldraw[gray!40] ( #1 , #2 ) rectangle ( #3 , #4 ); \draw[gray, thick] ( #1 , #2 ) rectangle ( #3 , #4 );}
@@ -79,7 +81,8 @@ That night I had one of the realizations that most mathematicians live for, that
         \( \cell{8.5}{1}{9}{1.5} \);
     \end{tikzpicture}
     </script>
-</div>
+</div> -->
+![](assets/img/minimals/2.png)
 
 These classes, from left to right, are
 - The shapes that contain $2$ or $3$ corners $S_2$
@@ -88,7 +91,7 @@ These classes, from left to right, are
 
 *Case 1.* We begin with $S_2$. Split $S_2$ into two subsets, $S_{T,2}$ and $S_{T,2}^c$ so that $S_{T,2} \cup S_{T,2}^c = S_2$. Let $S_{T,2}$ represent all polyominos that are "T-shaped", while $S_{T,2}^c$ will represent all polyominos that are not. Formally, the "T-shaped" polyominos are all polyominos that contain two adjacent corner cells and a perpendicular bar, as in the left polyomino in the figure below.
 
-<div align=center>
+<!-- <div align=center>
     <script type="text/tikz">
     % setup
     \newcommand{\cell}[4]{\filldraw[gray!40] ( #1 , #2 ) rectangle ( #3 , #4 ); \draw[gray, thick] ( #1 , #2 ) rectangle ( #3 , #4 );}
@@ -114,7 +117,8 @@ These classes, from left to right, are
         \( \cell{5}{1.5}{5.5}{2} \);
     \end{tikzpicture}
     </script>
-</div>
+</div> -->
+![](assets/img/minimals/3.png)
 
 For $\|S_{T,2}\|$ it is easy to see that $\|S_{T,2}\| = 2(w-2) + 2(\ell-2) = 2w+2\ell-8$, as there is a "T-shape" polyomino for every edge cell.
 
@@ -127,7 +131,7 @@ As we can make the same argument starting with any corner, we have $\|S_1\| = 4\
 
 *Case 3.* Finally, consider $S_0$. Suppose we have two cells $(i,j)$ and $(i',j')$, with $i,i' \in [2,w-1]$ and $j,j' \in [2,\ell-1]$, $i \leq i'$ and $j \leq j'$. 
 
-<div align=center>
+<!-- <div align=center>
     <script type="text/tikz">
     % setup
     \newcommand{\cell}[4]{\filldraw[gray!40] ( #1 , #2 ) rectangle ( #3 , #4 ); \draw[gray, thick] ( #1 , #2 ) rectangle ( #3 , #4 );}
@@ -148,7 +152,8 @@ As we can make the same argument starting with any corner, we have $\|S_1\| = 4\
         \( \cell{3}{1.5}{3.5}{2} \)
     \end{tikzpicture}
     </script>
-</div>
+</div> -->
+![](assets/img/minimals/4.png)
 
 One can construct a path from $(i,j)$ to $(i',j')$. Next, make a path from $(i,j)$ to $(1,j)$, and a path from $(i,j)$ to $(i,1)$. Similarly, make a path from $(i',j')$ to $(w,j')$ and a path from $(i',j')$ to $(i',\ell)$. This constructs a minimal inscribed polyomino that touches no corners, as shown above. 
 
@@ -180,7 +185,7 @@ The paper turned out to be very useful. I learned that my $4$-paths were a speci
 
 The direction I chose to go in for my thesis was to generalize not to higher dimensions (polycubes), but instead to other shapes. I chose to study minimal inscribed *polyforms*, where a polyform of area $n$ is a shape in the plane constructed by joining $n$ unit side length polygons along their edges. For example, below is a polyform composed of $9$ unit triangles.
 
-<div align=center>
+<!-- <div align=center>
     <script type="text/tikz">
     % setup
     \newcommand{\createtri}[6]{\filldraw[gray!40] ( #1 , #2 ) -- ( #3 , #4 ) -- ( #5 , #6 ) -- cycle; \draw[gray, thick] ( #1 , #2 ) -- ( #3 , #4 ) -- ( #5 , #6 ) -- cycle;}
@@ -197,89 +202,19 @@ The direction I chose to go in for my thesis was to generalize not to higher dim
         \( \createtri{2}{0}{3}{0}{2.5}{0.866} \);
     \end{tikzpicture}
     </script>
-</div>
+</div> -->
+![](assets/img/minimals/5.png)
 
-However, to generalize to polyforms, we also need to generalize the grid (or lattice) that we are inscribing these polyforms. For minimal inscribed polyforms it was clear what cells were considered touching a side of the rectangular lattice. In other lattices is may be less clear. For example, consider the figure below. 
-
-<div align=center>
-    <script type="text/tikz">
-    % setup
-    \newcommand{\createtri}[6]{\filldraw[gray!40] ( #1 , #2 ) -- ( #3 , #4 ) -- ( #5 , #6 ) -- cycle; \draw[gray, thick] ( #1 , #2 ) -- ( #3 , #4 ) -- ( #5 , #6 ) -- cycle;}
-    % actual image
-    \begin{tikzpicture}[scale=1.5]
-            %row 1
-            \draw[gray, thick] (0,0.25) -- (0.433,0) -- (0.866,0.25) -- (0.866,0.75) -- (0.433,1) -- (0,0.75) -- (0,0.25);
-            \draw[gray, thick] (0.866,0.25) -- (1.299,0) -- (1.732,0.25) -- (1.732,0.75) -- (1.299,1) -- (0.866,0.75) -- (0.866,0.25);
-            \draw[gray, thick] (1.732,0.25) -- (2.165,0) -- (2.598,0.25) -- (2.598,0.75) -- (2.165,1) -- (1.732,0.75) -- (1.732,0.25);
-            \draw[gray, thick] (2.598,0.25) -- (3.031,0) -- (3.464,0.25) -- (3.464,0.75) -- (3.031,1) -- (2.598,0.75) -- (2.598,0.25);
-            %row 2
-            \draw[gray, thick] (0.433,1) -- (0.866,0.75) -- (1.299,1) -- (1.299,1.5) -- (0.866,1.75) -- (0.433,1.5) -- (0.433,1);
-            \draw[gray, thick] (1.299,1) -- (1.732,0.75) -- (2.165,1) -- (2.165,1.5) -- (1.732,1.75) -- (1.299,1.5) -- (1.299,1);
-            \draw[gray, thick] (2.165,1) -- (2.598,0.75) -- (3.031,1) -- (3.031,1.5) -- (2.598,1.75) -- (2.165,1.5) -- (2.165,1);
-            %row 3
-            \draw[gray, thick] (0.866,1.75) -- (1.299,1.5) -- (1.732,1.75) -- (1.732,2.25) -- (1.299,2.5) -- (0.866,2.25) -- (0.866,1.75);
-            \draw[gray, thick] (1.732,1.75) -- (2.165,1.5) -- (2.598,1.75) -- (2.598,2.25) -- (2.165,2.5) -- (1.732,2.25) -- (1.732,1.75);
-            %row 4
-            \draw[gray, thick] (1.299,2.5) -- (1.732,2.25) -- (2.165,2.5) -- (2.165,3) -- (1.732,3.25) -- (1.299,3) -- (1.299,2.5);
-    \end{tikzpicture}
-    </script>
-</div>
-
-One of the lessons I learned during this thesis was just how important it is to make it clear exactly what we are talking about. The rest of this section is a formalization of exactly what I mean by minimal inscribed polyforms. 
-
-To make it clear which cells in a given lattice belong to a side, construct the dual graph $G$ of the lattice. Then let $k$ be the number of sides chosen. Minimal inscribed polyominos have $k=4$. In the above figure, the most obvious choice is $k=3$. After a $k$ is decided, label each vertex of $G$ with a subset of $[k]=\{1,2,\dots,k \}$, so that $\bigcup_{j \in V(G)} j = [k]$, where $V(G)$ is the vertex set of $G$. Let us call these graphs the *labelled dual* of $G$.
-
-The lattice in the above figure has many possible labelled duals, one of which is shown below.
-
-<div align=center>
-    <script type="text/tikz">
-    % setup
-    \newcommand{\lablnode}[3]{\node[shape=circle,draw=white,fill=white, inner sep=0pt,minimum size=2pt] (A) at ( #1 , #2 ) {(#3)};}
-    % actual image
-    \begin{tikzpicture}[scale=1.5]
-        \draw[gray, thick] (0,0) -- (3,0) -- (1.5,2.598) -- (0,0);
-        %rows
-        \draw[gray, thick] (0.5,0.866) -- (2.5,0.866);
-        \draw[gray, thick] (1,1.732) -- (2,1.732);
-        %big diagonals
-        \draw[gray, thick] (1,1.732) -- (2,0);
-        \draw[gray, thick] (2,1.732) -- (1,0);
-        %small diagonals
-        \draw[gray, thick] (1,0) -- (0.5,0.866);
-        \draw[gray, thick] (2,0) -- (2.5,0.866);
-        
-        %nodes
-        \( \lablnode{0}{0}{1,3} \)
-        \( \lablnode{1}{0}{3} \)
-        \( \lablnode{2}{0}{3} \)
-        \( \lablnode{3}{0}{2,3} \)
-        \( \lablnode{2}{1.732}{2} \)
-        \( \lablnode{2.5}{0.866}{2} \)
-        \( \lablnode{1.5}{2.598}{1,2} \)
-        \( \lablnode{1}{1.732}{1} \)
-        \( \lablnode{0.5}{0.866}{1} \)
-        
-        \( \lablnode{1.5}{0.866}{} \)
-    \end{tikzpicture}
-    </script>
-</div>
-
-Therefore, polyform inscription can be defined as follows. Suppose we have a labelled dual $G$. A given subgraph $G'$ is an *inscribed polyform* in $G$ if the following condition holds.
-
-$$\bigcup_{j \in V(G')} j = [k]$$
-
-Informally, the condition above says that the subgraph $G'$ touches all $k$ sides. Notice that the number of vertices in an inscribed polyform of $G$ can vary. If $A$ is an inscribed polyform, then $\|V(A)\| \in [m(G),\|V(G)\|]$.  Here $m(G)$ represents the minimum number of vertices for which the above holds, and can range from $1$ to $\|V(G)\|$, depending on the structure and labelling of $G$. Our focus is on the minimal inscribed polyforms, and so an inscribed polyform $A$ is *minimal* if $\|V(A)\| = m(G)$.  
-
-Finally, we are concerned with the number of polyforms that are minimal. For a labelled graph $G$, let $\rho(G)$ denote the number of minimal inscribed polyforms. My thesis was then constructing families of labelled graphs $G$ and computing $\rho(G)$ for these families. 
+We can consider families of both various shapes, various grids, and various subsets of cells that constitute the generalization of "inscription".
 
 ## Results
 
-My thesis was essentially a catalogue of $8$ of these families, and a few patterns I found among these families. This post will only hilight my favorite family from that catalogue. If you are interested in the other families for any of these results, please find my formal writeup of my results [here](https://github.com/JackHanke/minimal-inscribed-polyforms/blob/main/minnesota-sub/mjumsubmission.pdf).
+My thesis was essentially a catalogue of $8$ of these families, and a few patterns I found among these families. This post will only highlight my favorite family from that catalogue. If you are interested in the other families for any of these results, please find my formal writeup of my results [here](https://github.com/JackHanke/minimal-inscribed-polyforms/blob/main/minnesota-sub/mjumsubmission.pdf).
 
 My favorite family I enumerated was a triangle made of hexagons, where inscription meant touching all corner hexagons of the triangle. Let $\triangle_n$ represent a triangle with a side made up of $n$ hexagons. Below is an animation of all $41$ minimal inscribed polyforms in $\triangle_5$.
 
 {:refdef: style="text-align: center;"}
-![]({{ site.baseimg }}/assets/img/hex.gif)
+![]({{ site.baseimg }}/assets/img/minimals/hex.gif)
 {: refdef}
 
 *Theorem 2.* The number of minimal inscribed polyforms $\rho(\triangle_n)$ for $n\geq 2$ is given by the following formula.
@@ -290,7 +225,7 @@ The proof of Theorem was very difficult for me to arrive at. I tried the methods
 
 *Proof.* Each unit hexagon in the triangle corresponds with a unique weak integer $3$-composition of $n-1$. The figure below shows the visual interpretation of the integer composition for the dark grey hexagon. The lengths of the $3$ light grey "spokes" are the components of the composition. Suppose the components of the composition are labelled $k_1$, $k_2$, and $k_3$. Then the figure below represents the cell for $k_1 = 2$, $k_2 = 1$, and $k_3 = 1$, read counter-clockwise around the dark grey hexagon. 
 
-<div align=center>
+<!-- <div align=center>
     <script type="text/tikz">
     % setup
     \newcommand{\lablnode}[3]{\node[shape=circle,draw=white,fill=white, inner sep=0pt,minimum size=2pt] (A) at ( #1 , #2 ) {(#3)};}
@@ -332,13 +267,14 @@ The proof of Theorem was very difficult for me to arrive at. I tried the methods
         \draw[gray, thick] (1.732,3.25) -- (2.165,3) -- (2.598,3.25) -- (2.598,3.75) -- (2.165,4) -- (1.732,3.75) -- (1.732,3.25);
     \end{tikzpicture}
     </script>
-</div>
+</div> -->
+![](assets/img/minimals/8.png)
 
 Notice that $k_i$ can be $0$, as there are cells in which one cannot extend a spoke in a certain direction (the dark grey hexagon being located on a side or corner). 
 
 Using the spokes as guides, we can group paths from each corner to the dark grey hexagon. An example of this grouping is shown in the figure below.
 
-<div align=center>
+<!-- <div align=center>
     <script type="text/tikz">
     % setup
     \newcommand{\lablnode}[3]{\node[shape=circle,draw=white,fill=white, inner sep=0pt,minimum size=2pt] (A) at ( #1 , #2 ) {(#3)};}
@@ -386,7 +322,8 @@ Using the spokes as guides, we can group paths from each corner to the dark grey
         \draw[line width = 0.4mm, red] (3.464,1.75) -- (3.464,2.25) -- (3.031,2.5) -- (3.031,3) -- (2.598,3.25) -- (2.598,3.25) -- (2.598,3.75) -- (2.165,4) -- (1.732,3.75) -- (1.732,3.25) -- (1.732,3.25) -- (1.299,3) -- (1.299,2.5) -- (1.732, 2.25) -- (1.732, 1.75);
     \end{tikzpicture}
     </script>
-</div>
+</div> -->
+![](assets/img/minimals/9.png)
 
 Using this grouping we can construct the following sum for the number of possible sets of paths from each corner to a given vertex.
 
@@ -394,7 +331,7 @@ $$s(n) = \sum_{k_1 + k_2 + k_3 = n-1} \binom{k_1 + k_2}{k_1}\binom{k_2+k_3}{k_2}
 
 Notice that this grouping, and consequently $s(n)$, will count certain polyforms multiple times. An example of a polyform that is counted multiple times is shown in the figure below.
 
-<div align=center>
+<!-- <div align=center>
     <script type="text/tikz">
     % setup
     \newcommand{\lablnode}[3]{\node[shape=circle,draw=white,fill=white, inner sep=0pt,minimum size=2pt] (A) at ( #1 , #2 ) {(#3)};}
@@ -440,11 +377,12 @@ Notice that this grouping, and consequently $s(n)$, will count certain polyforms
         \draw[gray, thick] (1.732,3.25) -- (2.165,3) -- (2.598,3.25) -- (2.598,3.75) -- (2.165,4) -- (1.732,3.75) -- (1.732,3.25);
     \end{tikzpicture}
     </script>
-</div>
+</div> -->
+![](assets/img/minimals/10.png)
 
 All polyforms that are grouped multiple ways contains the following substructure.
 
-<div align=center>
+<!-- <div align=center>
     <script type="text/tikz">
     % setup
     \newcommand{\lablnode}[3]{\node[shape=circle,draw=white,fill=white, inner sep=0pt,minimum size=2pt] (A) at ( #1 , #2 ) {(#3)};}
@@ -464,14 +402,15 @@ All polyforms that are grouped multiple ways contains the following substructure
 
     \end{tikzpicture}
     </script>
-</div>
+</div> -->
+![](assets/img/minimals/11.png)
 
 Polyforms with these substructures are counted $3$ separate times. Fortunately, the number of polyforms that contain this substructure are easy to count, after the following transformation is made.
 
-<div align=center>
+<!-- <div align=center>
     <script type="text/tikz">
     % setup
-    \newcommand{\lablnode}[3]{\node[shape=circle,draw=white,fill=none, inner sep=0pt,minimum size=2pt] (A) at ( #1 , #2 ) {#3};}
+    \newcommand{\lablnode}[3]{\node[shape=circle,draw=none,fill=none, inner sep=0pt,minimum size=2pt] (A) at ( #1 , #2 ) {#3};}
     % actual image
     \begin{tikzpicture}[scale=1.5]
         \filldraw[gray!40] (0,0.25) -- (0.433,0) -- (0.866,0.25) -- (0.866,0.75) -- (0.433,1) -- (0,0.75) -- (0,0.25);
@@ -544,7 +483,8 @@ Polyforms with these substructures are counted $3$ separate times. Fortunately, 
         \draw[gray, thick] (7.299,2.5) -- (7.732,2.25) -- (8.165,2.5) -- (8.165,3) -- (7.732,3.25) -- (7.299,3) -- (7.299,2.5);
     \end{tikzpicture}
     </script>
-</div>
+</div> -->
+![](assets/img/minimals/12.png)
 
 Therefore the number of polyforms that contain this substructure is $s(n-1)$.  This, and the following identity
 
@@ -558,7 +498,7 @@ $$\rho(\triangle^{H*}_n) =s(n) - 2s(n-1) = \sum_{k=0}^{n-1} \binom{2k}{k} - 2\su
 
 Strangely, some families do not have a strictly increasing number of minimal inscribed polyforms in $n$. A family of labelled duals with this property is referred to as a *trivial* family. Inspired by the Article Circle Theorem, I really wanted to enumerate minimal inscribed polyforms inscribed in the [Aztec diamond](https://en.wikipedia.org/wiki/Aztec_diamond). An Aztec diamond can have a length $n$ and a width $m$, where the length and height are the number of squares on the respective sides. An example of an $n,m=3$ Aztec diamond is shown below.
 
-<div align=center>
+<!-- <div align=center>
     <script type="text/tikz">
     % setup
     \newcommand{\cell}[4]{\filldraw[gray!40] ( #1 , #2 ) rectangle ( #3 , #4 ); \draw[gray, thick] ( #1 , #2 ) rectangle ( #3 , #4 );}    
@@ -597,11 +537,12 @@ Strangely, some families do not have a strictly increasing number of minimal ins
         \( \cellw{1.5}{2.5}{2}{3} \);
     \end{tikzpicture}
     </script>
-</div>
+</div> -->
+![](assets/img/minimals/13.png)
 
 I was surprised that the Aztec diamond was a trivial family, only having $4$ minimal inscribed polyforms when $n=m$ for any $n \geq 2$, namely the below polyform and its rotations. 
 
-<div align=center>
+<!-- <div align=center>
     <script type="text/tikz">
     % setup
     \newcommand{\cell}[4]{\filldraw[gray!40] ( #1 , #2 ) rectangle ( #3 , #4 ); \draw[gray, thick] ( #1 , #2 ) rectangle ( #3 , #4 );}    
@@ -640,7 +581,8 @@ I was surprised that the Aztec diamond was a trivial family, only having $4$ min
         \( \cellw{1.5}{2.5}{2}{3} \);
     \end{tikzpicture}
     </script>
-</div>
+</div> -->
+![](assets/img/minimals/14.png)
 
 I was really disappointed that this family was trivial, so I thought about what I could do to get around this. Then I realized: what if I just made the corners count as adjacent too?
 
@@ -648,7 +590,7 @@ I was really disappointed that this family was trivial, so I thought about what 
 
 Because we were dealing with unit squares connected by adjacent edges and adjacent corners, I decided to call these objects *minimal inscribed pseudopolyominos*. Here is an example of one of these pseudopolyominos.
 
-<div align=center>
+<!-- <div align=center>
     <script type="text/tikz">
     % setup
     \newcommand{\cell}[4]{\filldraw[gray!40] ( #1 , #2 ) rectangle ( #3 , #4 ); \draw[gray, thick] ( #1 , #2 ) rectangle ( #3 , #4 );}    
@@ -687,7 +629,8 @@ Because we were dealing with unit squares connected by adjacent edges and adjace
         \( \cellw{1.5}{2.5}{2}{3} \);
     \end{tikzpicture}
     </script>
-</div>
+</div> -->
+![](assets/img/minimals/15.png)
 
 I knew this enumeration would be brutal. And boy was I right. I didn't get anywhere close before my thesis deadline, and it so this problem sat in my notebook for over a year. Over that year, the problem  achieved a sort of white whale status in my mind, being the problem I knew existed but couldn't conquer. 
 

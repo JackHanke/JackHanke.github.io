@@ -6,7 +6,7 @@ categories: [Machine Learning]
 tags: [Neural Networks, RL, RAMNets, From Scratch]
 math: true
 image:
-  path: assets/img/viz.gif
+  path: assets/img/2048rl/viz.gif
 ---
 
 | [GitHub Repo](https://github.com/JackHanke/2048rl) 👾 | **Scope:** ⭐⭐⭐ |

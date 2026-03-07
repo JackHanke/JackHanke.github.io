@@ -6,7 +6,7 @@ categories: [Math]
 tags: [Leetcode]
 math: true
 image:
-  path: assets/img/calvin.jpg
+  path: assets/img/binseqs/calvin.jpg
 ---
 
 | [GitHub Repo](https://github.com/JackHanke/binaryruns) 👾 | **Scope:** ⭐ |

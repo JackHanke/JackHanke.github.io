@@ -6,7 +6,7 @@ categories: [Machine Learning]
 tags: [Neural Networks, From Scratch]
 math: true
 image:
-  path: assets/img/soreal.png
+  path: assets/img/nns/soreal.png
 ---
 
 | [GitHub Repo](https://github.com/JackHanke/nets) 👾 | **Scope:** ⭐⭐⭐ |
