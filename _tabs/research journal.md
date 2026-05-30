@@ -66,6 +66,10 @@ This paper introduces ALiBi, a method of position encoding tokens in the attenti
 
 Position encodings confuse me. I know this is the modern solution for encoding position in transformers, so I started here. Honestly, I just need to reread this.
 
+- ✔️ [Decoupling the "What" and "Where" With Polar Coordinate Positional Embeddings](https://arxiv.org/abs/2509.10534) (2025)
+
+I reread the RoPE paper ahead of reading this. I really appreciated the discussion on length extrapolation, I feel like some reference to that in the RoPE paper would have helped my understanding. This is a clear improvement on RoPE, and I will use it going forward.
+
 ---
 
 ## Vision
@@ -77,6 +81,8 @@ Oops all Transformers.
 - [Rethinking and Improving Relative Position Encoding for Vision Transformer](https://arxiv.org/abs/2107.14222) (2021) *TO READ*
 
 - [DeepNet: Scaling Transformers to 1,000 Layers](https://arxiv.org/abs/2203.00555) (2022) *TO READ*
+
+---
 
 ## Image Generation
 
@@ -91,6 +97,8 @@ Image generation is just the coolest. Computers can draw!
 - [Score-Based Generative Modeling through Stochastic Differential Equations](https://arxiv.org/abs/2011.13456) (2021) *TO READ*
 
 - [Hierarchical Text-Conditional Image Generation with CLIP Latents](https://cdn.openai.com/papers/dall-e-2.pdf) (2022) *TO READ*
+
+- [Scalable Diffusion Models with Transformers](https://arxiv.org/abs/2212.09748) (2023) *TO READ*
 
 - [Flow Matching for Generative Modeling](https://arxiv.org/abs/2210.02747) (2023) *TO READ*
 
@@ -118,6 +126,8 @@ This paper covers Google Deepmind's AlphaGo Zero self-play training pipeline. In
 
 - [Acquisition of Chess Knowledge in AlphaZero](https://arxiv.org/abs/2111.09259) (2021) *TO READ*
 
+- [Accelerating Self-Play Learning in Go](https://arxiv.org/abs/1902.10565) (2020) *TO READ*
+
 ---
 
 ## Training Theory
@@ -136,6 +146,14 @@ This paper studies the phenomena of double descent, the idea that neural network
 
 This paper proposes the lottery ticket hypothesis, which claims that when training a large neural network, the network learns many concurrent sparse networks. The fastest learning of which, that being the subnetwork that won the "initialization lottery", dominates the gradients and consequently performance. Essentially, deep learning is bogosort.
 
+- ✔️ [Measuring the Intrinsic Dimension of Objective Landscapes](https://arxiv.org/abs/1804.08838) (2018)
+
+The authors of this paper find that solutions to tasks have relatively low intrinsic dimensionality compared to the number of model parameters, even though larger models find these solutions faster. I wonder what real life's intrinsic dimensionality is...
+
+- ✔️ [An Empirical Model of Large-Batch Training](https://arxiv.org/abs/1812.06162) (2018)
+
+This paper is a precursor to the scaling laws paper, where it studies the optimal batch size for a given task. They derive a quantity called the noise scale to predict when larger batch sizes give diminishing returns. They define pareto frontiers for the tradeoff between number of optimization steps and data points processed.
+
 - ✔️ [Scaling Laws for Neural Language Models](https://arxiv.org/abs/2001.08361) (2020)
 
 This paper details the empirical trends of training large language models, with a focus on a fixed compute budget. It sets out to answer questions like how big of a model should I have, how much data should I have, and how big of a batch should I have for some fixed amount of time on a GPU cluster. One of the most impressive things in all of machine learning is OpenAI predicting the final performance of GPT-4, which trained for months. This paper was critical when my friend Dan and I created our own language model. 
@@ -146,7 +164,7 @@ This paper studies how well large language models generalize with increasing sca
 
 - ✔️ [Grokking: Generalization Beyond Overfitting on Small Algorithmic Datasets](https://arxiv.org/abs/2201.02177) (2022)
 
-This paper discusses the phenomena where significant improvements in test loss can come rapidly, long after training loss has bottomed out. This rapid decrease in test loss is called grokking. The cause of grokking was deeply studied in a [blogpost by Neel Nanda](https://www.alignmentforum.org/posts/N6WM6hs7RQMKDhYjB/a-mechanistic-interpretability-analysis-of-grokking), where he determined the underlying anlgorithm learned by a transformer to do mod $113$ arithmetic. He showed that grokking is affected by how much data is available to train on compared with the total dataset (in this case $113^2$ datapoints), among other results.  Nowadays the word grok is ruined, but it was nice while it lasted.
+This paper discusses the phenomena where significant improvements in test loss can come rapidly, long after training loss has bottomed out. This rapid decrease in test loss is called grokking. The cause of grokking was deeply studied in a [blogpost by Neel Nanda](https://www.alignmentforum.org/posts/N6WM6hs7RQMKDhYjB/a-mechanistic-interpretability-analysis-of-grokking), where he determined the underlying algorithm learned by a transformer to do mod $113$ arithmetic. He showed that grokking is affected by how much data is available to train on compared with the total dataset (in this case $113^2$ datapoints), among other results.  Nowadays the word grok is ruined, but it was nice while it lasted.
 
 - ✔️ [Deep Reinforcement Learning with Double Q-learning](https://arxiv.org/pdf/1509.06461) (2015) 
 
@@ -154,7 +172,7 @@ This paper introduces a modification to deep Q-learning towards double Q-learnin
 
 - ✔️ [The Difficulty of Passive Learning in Deep Reinforcement Learning](https://arxiv.org/abs/2110.14020) (2021)
 
-This paper shows that offline RL learning exhibits a performance decrease from online RL algorithms even when the offline learner trains on data from the actions and experiences of the online learner. They compare this to the 1963 psychology experiment by Held and Hein called the [Kitten carosel](https://www.simplypsychology.org/held-and-hein-1963.html), and do a thorough ablation study of what causes the tandem effect. They conclude that the source of the tandem effect is in the combination of deep function approximation and insufficient data of non-greedy actions. Overall, this paper emphasizes the role of interactivity in the learning process and provides a framework for understanding the differences in online and offline learning.
+This paper shows that offline RL learning exhibits a performance decrease from online RL algorithms even when the offline learner trains on data from the actions and experiences of the online learner. They compare this to the 1963 psychology experiment by Held and Hein called the [Kitten Carousel](https://www.simplypsychology.org/held-and-hein-1963.html), and do a thorough ablation study of what causes the tandem effect. They conclude that the source of the tandem effect is in the combination of deep function approximation and insufficient data of non-greedy actions. Overall, this paper emphasizes the role of interactivity in the learning process and provides a framework for understanding the differences in online and offline learning.
 
 - ✔️ [The Platonic Representation Hypothesis](https://arxiv.org/abs/2405.07987) (2024)
 
@@ -164,13 +182,20 @@ This paper introduces the hypothesis that the representations large models arriv
 
 This is a crazy paper, very similar to *The Platonic Representation Hypothesis* paper above. If this is correct, we may be able to drop the first L in LLM!
 
-- [An Empirical Model of Large-Batch Training](https://arxiv.org/abs/1812.06162) (2018) *TO READ*
+- ✔️ [Questioning Representational Optimism in Deep Learning: The Fractured Entangled Representation Hypothesis](https://arxiv.org/abs/2505.11581) (2025)
+
+This paper claims SGD-derived representations are messy, and propose this is a key reason for the distinct failure modes in frontier AI systems. Grokking as a phenomena seems to partially mitigate this, but then again (as the paper points out) for systems that accomplish many types of tasks, how do we know whether the grokking happens holistically? I like these sorts of papers, as is really feels like there is so much work to be done.
+
+- ✔️ [Analyzing and Improving Representations with the Soft Nearest Neighbor Loss](https://arxiv.org/abs/1902.01889) (2019)
+
+I read this paper when looking into training contrastive vision encoder details.
 
 - [Why language models hallucinate](https://arxiv.org/abs/2509.04664) (2025) *TO READ*
 
 - [In-context Learning and Induction Heads](https://arxiv.org/abs/2209.11895) (2022) *TO READ*
 
 - [Nested Learning: The Illusion of Deep Learning Architectures](https://abehrouz.github.io/files/NL.pdf) (2025) *TO READ*
+
 - [Superposition Yields Robust Neural Scaling](https://arxiv.org/pdf/2505.10465) (2025) *TO READ*
 
 ---
@@ -183,9 +208,13 @@ The actual training of neural networks requires more than just the gradients. Mu
 
 This paper introduces a better way to initialize weights in a neural network than the usual samples from the standard normal. I was digging around some of the PyTorch source code and found a reference to this paper in the comments, so this paper is still informing current models!
 
+- [Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification](https://arxiv.org/abs/1502.01852) (2015) *TO READ*
+
 - ✔️ [Adam: A Method for Stochastic Optimization](https://arxiv.org/abs/1412.6980) (2014)
 
 This paper introduces the Adam optimizer, a variant of SGD that computes estimates of the first and second moments of the gradients. From what I know, its been unchallenged for over a decade. I implemented this one myself, and wasn't able to get my VAE to learn anything without it. 
+
+- [Decoupled Weight Decay Regularization](https://arxiv.org/abs/1711.05101) (2017) *TO READ*
 
 - ✔️ [Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift](https://arxiv.org/abs/1502.03167) (2015)
 
@@ -219,6 +248,8 @@ This paper describes modeling the offline reinforcement learning framework as a 
 
 I had no idea researchers were considering changing the residual connection, I thought that was sacred! I guess that's what makes a researcher. This paper was very interesting, though likely only useful for cutting edge labs. To be clear, I will be stealing their hyperparams for my own language model soon enough.
 
+- [Neural Discrete Representation Learning](https://arxiv.org/abs/1711.00937) (2017) *TO READ*
+
 - [On the Relationship between Self-Attention and Convolutional Layers](https://arxiv.org/abs/1911.03584) (2019) *TO READ*
 
 - [Multi-Game Decision Transformers](https://arxiv.org/abs/2205.15241) (2022) *TO READ*
@@ -235,7 +266,7 @@ I had no idea researchers were considering changing the residual connection, I t
 - ✔️ [Gemma 2: Improving Open Language Models at a Practical Size](https://arxiv.org/abs/2408.00118)
 - ✔️ [Gemma 3 Technical Report](https://arxiv.org/abs/2503.19786)
 
-The Gemma series of models are a great place to learn about current architectures and practices.
+The Gemma series of models are a great place to learn about current architectures and practices for LLMs.
 
 ---
 
@@ -284,6 +315,10 @@ An information-theoretic approach to understanding which components of an LLM ar
 
 Wait what is the program I made doing?
 
+- ✔️ [In-context Learning and Induction Heads](https://transformer-circuits.pub/2022/in-context-learning-and-induction-heads/index.html) (2022)
+
+In-context learning is the most important emergent phenomena in AI I know of. Discovering its internal mechanisms in extremely thorough detail is facinating and critical. I also like their definition of in-context learning simply as a significant decrease in loss at a later token in the context compared to an earlier one (the 50-th token compared to the 500-th token in the post). One of my favorite graphs in this post is the drop in this "score" during training.
+
 - [Stochastic Neighbor Embedding](https://proceedings.neurips.cc/paper_files/paper/2002/file/6150ccc6069bea6b5716254057a194ef-Paper.pdf) (2002) *TO READ*
 
 - [A Survey on Sparse Autoencoders: Interpreting the Internal Mechanisms of Large Language Models](https://arxiv.org/abs/2503.05613) (2025) *TO READ*
@@ -310,6 +345,7 @@ This blog post is great for getting a quick understanding of algorithms like PO 
 
 - [Leela Chess Zero Blog](https://lczero.org/blog/page/2/)
 
-- [Even Superhuman Go AIs Have Surprising Failure Modes](https://www.alignmentforum.org/posts/DCL3MmMiPsuMxP45a/even-superhuman-go-ais-have-surprising-failure-modes) (2023) *TO READ*
+- ✔️ [Even Superhuman Go AIs Have Surprising Failure Modes](https://www.alignmentforum.org/posts/DCL3MmMiPsuMxP45a/even-superhuman-go-ais-have-surprising-failure-modes) (2023)
 
+This must be a CNN thing. Insert the image of the dog in the shadow of a fence being identified as a tiger.
 

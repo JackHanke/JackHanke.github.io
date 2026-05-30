@@ -4,9 +4,11 @@ icon: fas fa-flask
 order: 1
 ---
 
-- Jack Hanke, Michael Maltenfort. Enumeration of Messy Polygon Mosaics (2025).
+- Jack Hanke, Michael Maltenfort. Enumeration of Polygon Free Mosaics (2026).
 
 🚧 [Working on it!](https://github.com/JackHanke/mosaics/blob/main/writeup/mosaics.pdf) 🚧
+
+This work is also recorded on the [OEIS](https://oeis.org/) sequence [A364440](https://oeis.org/A364440).
 
 - Jack Hanke. [Minimal Inscribed Polyforms](https://github.com/JackHanke/minimal-inscribed-polyforms/blob/main/minnesota-sub/mjumsubmission.pdf) (2023).
 
@@ -14,3 +16,4 @@ order: 1
 
 Though not published, I include my undergraduate honors thesis in this list due to the work I put towards this writeup.
 
+This work is also recorded on the [OEIS](https://oeis.org/) sequences [A356888](https://oeis.org/A356888) and [A356889](https://oeis.org/A356889).

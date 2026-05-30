@@ -129,6 +129,24 @@ I'm still working on finding mine.
 
 ---
 
+<p style="text-align:center;"><i> "Comparison is the thief of joy." </i></p>
+
+<p style="text-align:right;"><i> Unknown </i></p>
+
+---
+
+<p style="text-align:center;"><i> "In the midst of winter, I found there was, within me, an invincible summer." </i></p>
+
+<p style="text-align:right;"><i> Albert Camus, Return to Tipasa </i></p>
+
+---
+
+<p style="text-align:center;"><i> "Do whatever you want with my music, just don't make it boring." </i></p>
+
+<p style="text-align:right;"><i> Freddie Mercury </i></p>
+
+---
+
 # Malaphors
 
 Another thing I like to collect are [malaphors](https://en.wiktionary.org/wiki/malaphor)! My favorites are:

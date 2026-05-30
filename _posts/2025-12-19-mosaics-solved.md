@@ -9,7 +9,7 @@ image:
   path: assets/img/mosaics/mosaics_solved.jpg
 ---
 
-| [GitHub Repo](https://github.com/JackHanke/mosaics) 👾 | [YouTube Video](https://www.youtube.com/watch?v=D3dp5RBmPcs) 📺 | **Scope:** ⭐⭐⭐⭐ | 🚧 Under Construction 🚧 |
+| [GitHub Repo](https://github.com/JackHanke/mosaics) 👾 | [YouTube Video](https://www.youtube.com/watch?v=D3dp5RBmPcs) 📺 | **Scope:** ⭐⭐⭐⭐ |
 
 This is a followup to [this post]({% post_url 2023-07-23-mosaics %}).
 

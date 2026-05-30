@@ -31,7 +31,7 @@ The blog I have modeled my own after, and not just the styling. I was originally
 
 - [Julian Schrittwieser's Blog](https://www.julian.ac/index.html)
 
-Julian is the kind of smart that freaks me out. He was one of the technical leads on AlphaGo, which was project that lead me to study machine learning.
+Julian is the kind of intelligent that freaks me out. He was one of the technical leads on AlphaGo, which was project that lead me to study machine learning.
 
 ---
 
