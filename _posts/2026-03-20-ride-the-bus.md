@@ -9,7 +9,7 @@ image:
   path: assets/img/ridethebus/ridethebus.webp
 ---
 
-| [GitHub Repo](https://github.com/JackHanke/ridethebus) 👾 | **Scope:** ⭐⭐ | 🚧 Under Construction 🚧 |
+| [GitHub Repo](https://github.com/JackHanke/ridethebus) 👾 | **Scope:** ⭐⭐⭐ | 🚧 Under Construction 🚧 |
 
 *Ride the Bus* is a game played with a group of friends around a deck of cards. This post focused on *Phase II* of the game.
 
@@ -35,7 +35,9 @@ $$1, 1, 2, 5, 16, 62, 286, 1519, 9184, \dots$$
 
 Interestingly, this has already been solved! Jan Kristian Haugland added a formula for $a_n$ on the OEIS: [A144188](https://oeis.org/search?q=5%2C+16%2C+62%2C+286&language=english&go=Search). He showed the following. Let $f(0, 0) = 1$ and 
 
-$$f(n, k) = \text{max}\left(\sum_{i=0}^{k-1}f(n - 1, i), \sum_{i=k}^{n-1}f(n - 1, i) \right).$$
+$\begin{equation}
+f(n, k) = \text{max}\left(\sum_{i=0}^{k-1}f(n - 1, i), \sum_{i=k}^{n-1}f(n - 1, i) \right).
+\end{equation}$
 
 Then $a(n) = f(n, 0)$. Here $n$ represents the number of cards in the deck, and $k$ represents the number of cards that are higher than the current card in the deck. $f(n,k)$ is then the number of games that win from this situation. The optimal strategy is choosing the action with more corresponding cards remaining, and $f(n,k)$ is the maximum over drawing each possible card $i$ and continuing with $n-1$ cards. Therefore, we sum over $f(n,i)$ ranging between $0,\dots,k-1$ for the lower option and $k,\dots,n-1$ for the higher option.
 
@@ -71,73 +73,61 @@ $$\begin{array}
 1519&&f(7,1)&&f(7,2)&&f(7,3)
 \end{array}$$
 
-Here we can see that for even $n \geq 2$, we have $f(n,\lfloor\frac{n}{2}\rfloor) = \frac{1}{2}f(n,0)$. This is because for even $n$, we split the previous row perfectly in two. As $f(n,0)$ is the sum of the previous row, this middle value must be half $f(n,0)$, as all rows are symmetric.
+Here we can see that for even $n \geq 2$, we have $f(n,\lfloor\frac{n}{2}\rfloor) = \frac{1}{2}f(n,0)$. This is because for even $n$, the sum for $f(n,\lfloor\frac{n}{2}\rfloor)$ splits the previous row perfectly in two. As $f(n,0)$ is the sum of the previous row, and all rows are symmetric, this middle value must be half $f(n,0)$. Therefore, we can write
 
-More importantly, within this half-triangle we have $f(n,k)-f(n,k+1) = f(n-1,k)$. That is, in the above diagram the larger sum will always be the "right" sum. Therefore, the sum of the previous row for both $f(n,k)$ and $f(n,k+1)$ differ only by the element in the previous row between the two, that being $f(n-1,k)$. We rewrite this to be 
+$\begin{equation} f(n,0) = 2\sum_{k=0}^{\lfloor\frac{n}{2}\rfloor-1}f(n-1,k) + \frac{1}{2}f(n-1,0) \mathbb{I}_{\text{odd } n \geq 3}\end{equation}$
 
-$$f(n,k+1) = f(n,k)-f(n-1,k),$$
+Next notice that within this half-triangle we have $f(n,k)-f(n,k+1) = f(n-1,k)$. That is, in the above diagram the larger sum will always be the "right" sum. Therefore, the sum of the previous row for both $f(n,k)$ and $f(n,k+1)$ differ only by the element in the previous row between the two, that being $f(n-1,k)$. We rewrite this to be 
 
-for $k \geq \lfloor\frac{n}{2}\rfloor$. Using this fact, we can compute $f(7,1)$ another way. We know that $f(7,0)=1519$ is the sum of the previous row, and we know $f(n,1)$ is the sum of the previous row, excluding $286$. So the $f(7,1) = 1519-286$. Not only that, we know that we can write for any $n>1$ that $f(n,1) = f(n,0)-f(n-1,0)$, by the same argument. For $f(n,2)$, we have 
+$\begin{equation}f(n,k) = f(n,k-1)-f(n-1,k-1),\end{equation}$
+
+for $0 \leq k \leq \lfloor\frac{n}{2}\rfloor-1$. For example, we can compute $f(7,1)$ another way. We know that $f(7,0)=1519$ is the sum of the previous row, and we know $f(n,1)$ is the sum of the previous row, excluding $286$. So we have $f(7,1) = 1519-286$. 
+
+We use Equation (3) to rewrite Equation (2). We know that we can write for any $n>1$ that $f(n,1) = f(n,0)-f(n-1,0)$, by the same argument. For $f(n,2)$, we have 
 
 $$f(n,2) = f(n,1)-f(n-1,1) = (f(n,0)-f(n-1,0)) - (f(n-1,0)-f(n-2,0)).$$
 
-We can then simply continue to chain the main identity for $k < \lfloor\frac{n}{2}\rfloor$, as we know $f(n,\lfloor\frac{n}{2}\rfloor)$ for even $n$. This gives
+We can then simply continue to chain the main identity for $k < \lfloor\frac{n}{2}\rfloor$, as we know $f(n,\lfloor\frac{n}{2}\rfloor)$ for even $n$, so
 
-$$f(n,k) = \sum_{i=0}^{k}(-1)^{i}\binom{k}{i}f(n-i,0).$$
+$\begin{equation}f(n,k) = \sum_{i=0}^{k}(-1)^{i}\binom{k}{i}f(n-i,0).\end{equation}$
 
-Therefore, we can write
+Substituing Equation (4) into Equation (2), and writing $a_n = f(n,0)$ gives
 
-$$f(n,0) = 2\sum_{k=0}^{\lfloor\frac{n}{2}\rfloor-1}f(n-1,k) + \begin{cases} 
-  \frac{1}{2}f(n-1,0) & n \text{ odd } \geq 3 \\
-  0 & n \text{ even, else} \\
-\end{cases}$$
-
-Substituting $a_n = f(n,0)$, and using our identity from above gives
-
-$$a_n = 2\sum_{k=0}^{\lfloor\frac{n}{2}\rfloor-1} \sum_{i=0}^{k} (-1)^{i} \binom{k}{i} a_{n-1-i} + \begin{cases} 
-  \frac{1}{2}a_{n-1} & n \text{ odd } \geq 3 \\
-  0 & n \text{ even, else.} \\
-\end{cases}$$
+$$a_n = 2\sum_{k=0}^{\lfloor\frac{n}{2}\rfloor-1} \sum_{i=0}^{k} (-1)^{i} \binom{k}{i} a_{n-1-i} + \frac{1}{2}f(n-1,0) \mathbb{I}_{\text{odd } n \geq 3}$$
 
 Let's focus on the double sum. Switching the indexing order gives
 
 $$\sum_{i=0}^{\lfloor\frac{n}{2}\rfloor-1} (-1)^{i}a_{n-1-i} \sum_{k=i}^{\lfloor\frac{n}{2}\rfloor-1} \binom{k}{i}.$$
 
-This is the [hockey stick identity](https://en.wikipedia.org/wiki/Hockey-stick_identity), so
+The inner sum nicely simplifies with the [hockey stick identity](https://en.wikipedia.org/wiki/Hockey-stick_identity), so our sum becomes
 
 $$\sum_{i=0}^{\lfloor\frac{n}{2}\rfloor-1} (-1)^{i} a_{n-1-i} \binom{\lfloor\frac{n}{2}\rfloor}{i+1}.$$
 
 Setting $i+1 \to i$ gives that
 
-$$a_n = 2\sum_{i=1}^{\lfloor \frac{n}{2} \rfloor} (-1)^{i+1} \binom{\lfloor \frac{n}{2} \rfloor}{i} a_{n-i} + \begin{cases} 
-  \frac{1}{2}a_{n-1} & n \text{ odd } \geq 3 \\
-  0 & n \text{ even, else.} \\
-\end{cases}$$
+$\begin{equation}a_n = 2\sum_{i=1}^{\lfloor \frac{n}{2} \rfloor} (-1)^{i+1} \binom{\lfloor \frac{n}{2} \rfloor}{i} a_{n-i} + \frac{1}{2}f(n-1,0) \mathbb{I}_{\text{odd } n \geq 3}\end{equation}$
 
-This is a pretty neat formula!
+This is a pretty neat formula, and a lot faster to compute than the original $f$!
 
 ## Extensions
 
-We can extend Haugland's formula to the number of games that end at move $j$: 
+We can extend Haugland's function $f$ to to the number of $n$-card games with $k$ cards less than the current card in the deck that end at move $j$. This function, which we call $g(n, k, j)$, is defined as
 
 $$g(n, k, j) = \begin{cases} ? & \text{ for } j = 0 \\ \text{max}\left(\sum_{i=0}^{k-1} g(n - 1, i, j-1), \sum_{i=k}^{n-1} g(n - 1, i, j-1) \right) & \text{ else.} \end{cases}$$
 
-Clearly we have $g(n, k, n) = f(n,k)$. We have a similar functional relationship for $g$ as well
+Clearly we have $g(n, k, n) = f(n,k)$. We have an analog to Equation (2),
 
-$$g(n,k,j) = g(n,k-1,j) - g(n-1,k-1,j-1).$$
+$\begin{equation} g(n,0,j) = 2\sum_{k=0}^{\lfloor\frac{n}{2}\rfloor-1}g(n-1,k,j-1) + \frac{1}{2}g(n-1,0,j-1)\mathbb{I}_{\text{odd } n \geq 3}, \end{equation}$
 
-We also have 
+as well as to Equation (3),
 
-$$g(n,0,j) = 2\sum_{k=0}^{\lfloor\frac{n}{2}\rfloor-1}g(n-1,k,j-1) + \begin{cases} 
-  \frac{1}{2}g(n-1,0,j-1) & n \text{ odd } \geq 3 \\
-  0 & n \text{ even, else} \\
-\end{cases}$$
+$\begin{equation} g(n,k,j) = g(n,k-1,j) - g(n-1,k-1,j-1), \end{equation}$
 
-We want to write $(g,k,j)$ in terms of $(g,0,j) = b_{n,j}.$
+for $0 \leq k < \lfloor \frac{n}{2} \rfloor$ and $j > 0$. Similarly to the goal for Haugland's $f$, we want to write $g(n,k,j)$ in terms of $(g,0,j)$. To get an analog to Equation (4), 
 
 **TODO review above**
 
-$$g(n,k,j) = \sum_{i=0}^j (-1)^{i} \binom{k}{i} g(n-i,0,j-i) + (-1)^{j} \sum_{i=0}^{j-1}\binom{k-1-i}{j-1}g(n-j,i,0)$$
+$$g(n,k,j) = \sum_{i=0}^{j-1} (-1)^{i} \binom{k}{i} g(n-i,0,j-i) + (-1)^{j} \sum_{i=0}^{j-1}\binom{k-1-i}{j-1}g(n-j,i,0)$$
 
 **TODO review above**
 

@@ -22,6 +22,8 @@ This is the best introduction to deep learning I know of, and it's free. I have 
 
 This is the foundational text in reinforcement learning. It is the best possible starting resource for learning RL. I read this over the summer so I could make a bot made in vanilla Python that learns to play the mobile game 2048. The next summer the authors won the Turing Award!
 
+- [The Principles of Deep Learning Theory](https://arxiv.org/abs/2106.10165) (2021) *TO READ*
+
 ---
 
 ## Seminal Architectures
@@ -248,7 +250,9 @@ This paper describes modeling the offline reinforcement learning framework as a 
 
 I had no idea researchers were considering changing the residual connection, I thought that was sacred! I guess that's what makes a researcher. This paper was very interesting, though likely only useful for cutting edge labs. To be clear, I will be stealing their hyperparams for my own language model soon enough.
 
-- [Neural Discrete Representation Learning](https://arxiv.org/abs/1711.00937) (2017) *TO READ*
+- ✔️ [Neural Discrete Representation Learning](https://arxiv.org/abs/1711.00937) (2017)
+
+Apparently VQ-VAEs are popular in pure RL work like [Dreamerv3](https://arxiv.org/abs/2301.04104). It is interesting to me that a discrete subset of continuous latent representations works as well as a purely continuous latent space. I wonder where this thread of research has gone since this paper...
 
 - [On the Relationship between Self-Attention and Convolutional Layers](https://arxiv.org/abs/1911.03584) (2019) *TO READ*
 

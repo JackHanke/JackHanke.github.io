@@ -70,18 +70,43 @@ I then trained a BPE tokenizer on this data using the [HuggingFace tokenizers](h
 
 Before conducting pretraining, I wanted to be very sure it was going to work. I follow a lot of the advice provided in the excellent HuggingFace resource [The Smol Training Playbook:The Secrets to Building World-Class LLMs](https://huggingface.co/spaces/HuggingFaceTB/smol-training-playbook#introduction). 
 
-I trained using AdamW with `BETA_1 = 0.9, BETA_2 = 0.95, WEIGHT_DECAY = 0.1`. I used the [WSD learning rate schedule](https://arxiv.org/abs/2404.06395) with 1000 warmup steps and 2000 cooldown steps. The batch size was 2000 sequences of 512 tokens, or a 1.02M token effective batch size. To fit on my GPU, I accumulated 16 sequences at a time, and accumulated every 125 iterations. This resulted in a training loop that ran for ~353 hours, or just under 15 days.
+I trained using AdamW with `BETA_1 = 0.9, BETA_2 = 0.95, WEIGHT_DECAY = 0.1`. I used the [WSD learning rate schedule](https://arxiv.org/abs/2404.06395) with 1000 warmup steps and 2000 cooldown steps. The batch size was 2000 sequences of 512 tokens, or a 1.02M token effective batch size. To fit on my GPU, I accumulated 16 sequences at a time, and accumulated every 125 iterations. I had a bug where I accidentally cast the whole model to `bfloat16` instead of doing mixed precision training, which resulted in a failed run I caught after 2 days. Amusingly, the HuggingFace SmolLM team faced a similar issue for their post-traing. After I got that resolved, the training loop ran for ~353 hours, or just under 15 days.
 
-I had a bug where I accidentally cast the whole model to `bfloat16` instead of doing mixed precision training, which resulted in a failed run I caught after 2 days. Amusingly, the HuggingFace SmolLM team faced a similar issue for their post-traing.
+![](./assets/img/llm/twoweekslater.JPG)
 
-**TODO**
+After a very long 15 days, I got the following learning curve, ending with a train loss of ~2.3.
+
+![](./assets/img/llm/full_pretraining_curve.png)
+
+Zooming in on the last 15k iterations...
+
+![](./assets/img/llm/last15k_pretraining_curve.png)
+
+The massive spike is from when I lost power, which ended up flushing the optimizer's state and hurting performance for a bit before recovering. One can also see how the tail end of WSD leads to performance gains at the very end of pretraining.
+
+I made a quick hacky (greddy) decoder to test out generation of the pretrained model. Since there were no `[EOS]` tokens in pretraining, I decided to truncate generation at 64 tokens. I was very happy to see the following generation pop out.
+
+```
+[BOS] my name is jack hanke. i like to make programs. what is my name?
+## generation begins, this line is not included in the prompt
+jack▁hanke▁is▁a▁computer▁scientist▁at▁the▁university▁of▁california,▁berkeley.▁he▁is▁the▁author▁of▁the▁book▁"the▁art▁of▁computer▁programming".▁he▁is▁also▁the▁author▁of▁the▁book▁"the▁art▁of▁computer▁programming".
+jack▁hanke▁is▁a▁computer▁scientist▁at▁the▁university
+```
+
+It looks like qt has mixed me up for Donald Knuth. Trust me, I'm not that guy pal.
+
+Anyways, it was time for post training!
 
 ## Post Training
 
 Avoiding large amounts of synthetic data was easy for pretraining, but not so much for post training. There are many "GPT Conversations" datasets available that I wanted to avoid. I considered other dataset options from the paper [Instruction Tuning for Large Language Models: A Survey](https://arxiv.org/abs/2308.10792), but decided against it.
 
-- For instruction tuning, I use the [FLAN dataset](https://huggingface.co/datasets/Open-Orca/FLAN/tree/main). 
-- For dialogue tuning, I use [SAMsum](https://huggingface.co/datasets/knkarthick/samsum) and [dialogsum](https://huggingface.co/datasets/knkarthick/dialogsum/viewer/default/train?row=0)
+- For instruction tuning, I use:
+    - [databricks-dolly-15k](https://huggingface.co/datasets/databricks/databricks-dolly-15k)
+    - [norobots](https://huggingface.co/datasets/HuggingFaceH4/no_robots)
+- For dialogue tuning, I use:
+    - [SAMsum](https://huggingface.co/datasets/knkarthick/samsum)
+    - [dialogsum](https://huggingface.co/datasets/knkarthick/dialogsum/viewer/default/train?row=0)
 
 Finally, to create qt's personality, 
 
