@@ -6,12 +6,12 @@ categories: [Machine Learning]
 tags: [Neural Networks, Attention, Transformers, Ground Up]
 math: true
 image:
-  path: /assets/img/bmo_reading.jpg
+  path: /assets/img/llm/bmo_reading.jpg
 ---
 
 <p style="text-align:center;"><i> Art by <a href="https://www.deviantart.com/ughh-nyet">tapiokurii</a> </i></p>
 
-| [GitHub Repo](https://github.com/JackHanke/qt) 👾 | **Scope:** ⭐⭐⭐⭐⭐ |  🚧 Under Construction 🚧 |
+| [GitHub Repo](https://github.com/JackHanke/qt) 👾 | **Scope:** ⭐⭐⭐⭐⭐ |
 
 Large language models, or LLMs, are undoubtedly the technology of our time. The fact that you can talk to a piece of software like you would a person boggles my mind. These programs are so incredible that I just had to make one. There is only one slight problem: I don't have millions of dollars to spend on this project. The creation of a modern chatbot of the quality of ChatGPT, Gemini, or Claude is therefore completely infeasible for any one person. So I set out to hand code an LLM, from the ground up, on a hobby budget. But first I would need to create a plan of attack.
 
@@ -99,36 +99,42 @@ Anyways, it was time for post training!
 
 ## Post Training
 
-Avoiding large amounts of synthetic data was easy for pretraining, but not so much for post training. There are many "GPT Conversations" datasets available that I wanted to avoid. I considered other dataset options from the paper [Instruction Tuning for Large Language Models: A Survey](https://arxiv.org/abs/2308.10792), but decided against it.
+Avoiding large amounts of synthetic data was easy for pretraining, but not so much for post training. There are many "GPT Conversations" datasets available that I wanted to avoid. I considered other dataset options from the paper [Instruction Tuning for Large Language Models: A Survey](https://arxiv.org/abs/2308.10792), but decided against it. I eventually settled on the following.
 
-- For instruction tuning, I use:
-    - [databricks-dolly-15k](https://huggingface.co/datasets/databricks/databricks-dolly-15k)
-    - [norobots](https://huggingface.co/datasets/HuggingFaceH4/no_robots)
 - For dialogue tuning, I use:
     - [SAMsum](https://huggingface.co/datasets/knkarthick/samsum)
     - [dialogsum](https://huggingface.co/datasets/knkarthick/dialogsum/viewer/default/train?row=0)
+- For instruction tuning, I use:
+    - [databricks-dolly-15k](https://huggingface.co/datasets/databricks/databricks-dolly-15k)
+    - [norobots](https://huggingface.co/datasets/HuggingFaceH4/no_robots)
 
-Finally, to create qt's personality, 
+Finally, to create qt's personality, I wrote up a small collection of sample conversations with the personality I was hoping for. I only wrote 10 conversations, so unfortunately this turned out not to be enough to instill any meaningful change in qt's responses.
 
-**TODO**
+This training only took about an hour on my machine, and I was ready to make some generations!
 
 ## Example Generations
 
-**TODO**
+Here is an example of a conversation where I ask qt about pizza.
+
+![](./assets/img/llm/qt_conversation.gif)
 
 ## Visualization
 
-**TODO**
+Here is an example of animating qt's internal thoughts for generating the next word. I take the 2-dimensional PCA of qt's 2048-dimensional token embeddings, and connect the individual points for each token with a line to indicate sentence order. When sending the tokens to qt, I change the points to the color red, and take the same PCA transform of the internal activations for each half layer (attention and feed forward). I then show the final token turns out to be closest to the answer, "breakfast".
+
+![](./assets/img/llm/qt_animated.gif)
 
 ## If I were to do it again...
 
 Perefection is the enemy of good. But I did learn some things. If I were to do it again, I would:
 
-- Use the [ClimbMix](https://research.nvidia.com/labs/lpr/climb/) dataset for more varied, high quality data
-- Try [token superposition pretraining](https://nousresearch.com/token-superposition) to drasically speed up pretraining
-- Rent a GPU cluster (I'm not waiting 15 days again)
-- Make the vocab size slightly larger, to make a squatter 1B model (and therefore faster inference)
-- Track bit-per-byte as opposed to cross entropy for pretraining for a more standard performance metric
-- Possibly add emojis to vocab, just for fun
+- Use the 400B [ClimbMix](https://research.nvidia.com/labs/lpr/climb/) dataset for more varied, high quality data.
+- Try [token superposition pretraining](https://nousresearch.com/token-superposition) to drasically speed up pretraining.
+- Rent a GPU cluster (I'm not waiting 15 days again).
+- Make the vocab size slightly larger, to make a squatter 1B model (and therefore faster inference).
+- Track bit-per-byte as opposed to cross entropy for pretraining for a more standard performance metric.
+- Implement beam search.
+- Possibly add emojis to vocab, just for fun 🫠.
+- Scaling! More parameters! More layers! More data!
 
 Thank you for reading!

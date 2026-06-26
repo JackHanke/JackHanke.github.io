@@ -262,6 +262,8 @@ Apparently VQ-VAEs are popular in pure RL work like [Dreamerv3](https://arxiv.or
 
 - [Less is More: Recursive Reasoning with Tiny Networks](https://arxiv.org/abs/2510.04871) (2025) *TO READ*
 
+- [Next-Latent Prediction Transformers Learn Compact World Models](https://arxiv.org/abs/2511.05963) (2025) *TO READ*
+
 ---
 
 ## Specific Models
@@ -294,6 +296,8 @@ The future is in our (really just ~500 people that aren't me) hands.
 - ✔️ [The Superintelligent Will: Motivation and Instrumental Rationality in Advanced Artificial Agents](https://link.springer.com/article/10.1007/s11023-012-9281-3) (2012)
 
 This essay introduces a series of fundamental concepts in AI safety, namely instrumental convergence. Instrumental convergence is the idea that any significantly capable agent with almost any terminal goal would necessarily create certain sub-goals in its pursuit. These instrumental sub-goals include access to resources and self preservation. I never know how useful old AI Safety work is because of the transition away from RL-based systems, but it is a useful idea. I even wrote a blog post about it!
+
+- [From AGI to ASI](https://arxiv.org/abs/2606.12683v1) (2026) *TO READ*
 
 - [AI 2027](https://ai-2027.com/) (2025) *TO READ*
 
